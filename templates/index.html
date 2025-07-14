@@ -522,9 +522,11 @@
         <div class="modal-content">
             <button class="modal-close">❌</button>
             <h2>Schedule a Meeting</h2>
-            <form id="hireForm" action="https://formspree.io/f/mqalzyyg" method="POST">
-                <!-- Add form identifier -->
+            <form id="hireForm" action="https://formspree.io/f/mwpqeryv" method="POST">
+                <!-- Add form identifier and recipient email -->
                 <input type="hidden" name="form-name" value="hire-form">
+                <input type="hidden" name="_replyto" value="akashkamble0063@gmail.com">
+                <input type="hidden" name="_subject" value="New Meeting Request">
                 
                 <div class="form-group">
                     <label for="hireName">Name <span class="required">*</span></label>
@@ -1101,11 +1103,14 @@
             });
 
             // Open modal
-            openButton.addEventListener('click', function(e) {
+            function openModal(e) {
                 e.preventDefault();
                 modal.classList.add('show');
                 document.body.style.overflow = 'hidden';
-            });
+                form.style.display = 'block';
+                formSuccess.style.display = 'none';
+                formError.style.display = 'none';
+            }
 
             // Close modal
             function closeModal() {
@@ -1116,23 +1121,31 @@
                 formError.style.display = 'none';
             }
 
-            closeButton.addEventListener('click', closeModal);
-            modal.addEventListener('click', function(e) {
-                if (e.target === modal || e.target.classList.contains('modal-overlay')) {
-                    closeModal();
-                }
-            });
-
             // Handle form submission
-            form.addEventListener('submit', function(e) {
+            function handleSubmit(e) {
                 e.preventDefault();
                 
+                // Basic validation
+                const name = form.querySelector('#hireName').value.trim();
+                const email = form.querySelector('#hireEmail').value.trim();
+                const jobLink = form.querySelector('#jobLink').value.trim();
+                const date = form.querySelector('#date').value.trim();
+                const time = form.querySelector('#time').value.trim();
+
+                if (!name || !email || !jobLink || !date || !time) {
+                    formError.textContent = 'Please fill in all required fields.';
+                    formError.style.display = 'block';
+                    return;
+                }
+
                 const formData = new FormData(form);
+                // Add formatted date and time to email
+                formData.append('Meeting Date', date);
+                formData.append('Meeting Time', time + ' EST');
+                
                 const submitBtn = form.querySelector('.submit-btn');
                 const btnText = submitBtn.querySelector('.btn-text');
                 const btnLoading = submitBtn.querySelector('.btn-loading');
-                const formSuccess = document.getElementById('formSuccess');
-                const formError = document.getElementById('formError');
 
                 // Show loading state
                 btnText.style.display = 'none';
@@ -1148,7 +1161,12 @@
                         'Accept': 'application/json'
                     }
                 })
-                .then(response => response.json())
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
                 .then(data => {
                     if (data.ok) {
                         form.style.display = 'none';
@@ -1163,6 +1181,7 @@
                     console.error('Error:', error);
                     formSuccess.style.display = 'none';
                     formError.style.display = 'block';
+                    formError.textContent = 'Sorry, there was an error submitting the form. Please try again.';
                 })
                 .finally(() => {
                     // Reset button state
@@ -1170,6 +1189,22 @@
                     btnLoading.style.display = 'none';
                     submitBtn.disabled = false;
                 });
+            }
+
+            // Event listeners
+            openButton.addEventListener('click', openModal);
+            document.getElementById('bookCallButton').addEventListener('click', openModal);
+            closeButton.addEventListener('click', closeModal);
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal || e.target.classList.contains('modal-overlay')) {
+                    closeModal();
+                }
+            });
+            form.addEventListener('submit', handleSubmit);
+
+            // Prevent modal from closing when clicking inside content
+            modalContent.addEventListener('click', function(e) {
+                e.stopPropagation();
             });
 
             // Initialize
