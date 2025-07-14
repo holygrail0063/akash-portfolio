@@ -826,26 +826,41 @@ section:first-of-type {
 /* Responsive Design */
 @media (max-width: 768px) {
     .skill-grid {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap: 20px;
+        padding: 0 10px;
     }
-    
-    .learning-grid {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-        gap: 15px;
+
+    .skill-item {
+        transform: scale(0.9);
     }
-    
-    .skill-logo {
-        width: 28px;
-        height: 28px;
+
+    .progress-ring {
+        width: 100px;
+        height: 100px;
     }
-    
+
+    .progress-ring-circle {
+        stroke-width: 6;
+        r: 45;  /* Adjusted radius */
+        cx: 50;  /* Adjusted center X */
+        cy: 50;  /* Adjusted center Y */
+    }
+
+    .progress-ring-circle-bg {
+        stroke-width: 6;
+        r: 45;  /* Adjusted radius */
+        cx: 50;  /* Adjusted center X */
+        cy: 50;  /* Adjusted center Y */
+    }
+
     .skill-name {
-        font-size: 0.8em;
+        font-size: 0.9rem;
+        margin-top: 8px;
     }
-    
+
     .skill-rating {
-        font-size: 0.9em;
+        font-size: 0.85rem;
     }
 }
 
@@ -878,10 +893,11 @@ section:first-of-type {
 .contact-form {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    width: 100%;
     max-width: 500px;
     margin: 0 auto;
-    gap: 10px;
+    gap: 15px;
+    padding: 0 15px;
     opacity: 0;
     transform: translateY(30px);
     animation: formFadeIn 0.8s ease-out 0.3s forwards;
@@ -900,12 +916,11 @@ section:first-of-type {
 
 .form-group {
     width: 100%;
-    margin-bottom: 0;
+    margin-bottom: 5px;
 }
 
 .input-wrapper {
     width: 100%;
-    margin-bottom: 0;
 }
 
 .input-icon {
@@ -952,11 +967,11 @@ section:first-of-type {
 .submit-btn {
     width: auto;
     min-width: 200px;
-    margin: 10px auto;
+    margin: 20px auto;  /* Increased margin for better spacing */
     background: var(--primary-accent);
     color: white;
     border: none;
-    padding: 11px 14px;
+    padding: 12px 28px;  /* Adjusted padding for better text alignment */
     border-radius: 12px;
     font-size: 0.9rem;
     font-weight: 600;
@@ -964,11 +979,71 @@ section:first-of-type {
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 188, 212, 0.3);
     position: relative;
-    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 6px;  /* Reduced gap between icon and text */
+    text-align: center;
+}
+
+.btn-text {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.btn-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+/* Center the form elements */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+    gap: 15px;  /* Increased gap for better spacing */
+}
+
+.form-group {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .contact-form {
+        align-items: flex-start;
+        padding: 0 20px;
+    }
+
+    .contact-intro {
+        text-align: left;
+        padding: 0 20px;
+        margin-bottom: 20px;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    .contact-label {
+        text-align: left;
+    }
+
+    .input-wrapper input,
+    .input-wrapper textarea {
+        width: 100%;
+    }
+
+    .submit-btn {
+        width: 100%;
+        min-width: unset;
+        margin: 15px 0;
+    }
 }
 
 .submit-btn:hover {
@@ -1871,5 +1946,3 @@ h1, .resume-title, .tab-content h2 {
 .navbar a:hover {
     color: var(--secondary-accent);
 } 
-
- 
