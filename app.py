@@ -5,18 +5,20 @@ import socket
 
 app = Flask(__name__, static_folder='static')
 
-# Counter file path
+# Initialize visit counter
 COUNTER_FILE = 'visit_counter.json'
 
-def load_counter():
-    if os.path.exists(COUNTER_FILE):
+def load_visit_count():
+    try:
         with open(COUNTER_FILE, 'r') as f:
-            return json.load(f)
-    return {'visits': 0}
+            data = json.load(f)
+            return data.get('visits', 0)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return 0
 
-def save_counter(counter_data):
+def save_visit_count(count):
     with open(COUNTER_FILE, 'w') as f:
-        json.dump(counter_data, f)
+        json.dump({'visits': count}, f)
 
 def get_local_ip():
     try:
@@ -31,15 +33,16 @@ def get_local_ip():
 
 @app.route('/')
 def home():
-    counter_data = load_counter()
-    counter_data['visits'] += 1
-    save_counter(counter_data)
-    return render_template('index.html', visit_count=counter_data['visits'])
-
-@app.route('/api/visit-count')
-def get_visit_count():
-    counter_data = load_counter()
-    return jsonify({'visits': counter_data['visits']})
+    # Increment visit count
+    visit_count = load_visit_count() + 1
+    save_visit_count(visit_count)
+    
+    # Format visit count for display
+    formatted_count = f"{visit_count:,}"
+    if visit_count >= 1000:
+        formatted_count = f"{visit_count/1000:.1f}k"
+    
+    return render_template('index.html', visit_count=formatted_count)
 
 @app.route('/Resume.pdf')
 def serve_resume():
