@@ -44,3 +44,11 @@ def get_visit_count():
 @app.route('/Resume.pdf')
 def serve_resume():
     return send_file('Resume.pdf', mimetype='application/pdf')
+
+if __name__ == '__main__':
+    local_ip = get_local_ip()
+    print(f"\nLocal server URLs:")
+    print(f"Computer access: http://localhost:5000")
+    print(f"Mobile access: http://{local_ip}:5000")
+    print("\nShare the mobile access URL with devices on your network to test mobile view.")
+    app.run(host='0.0.0.0', port=5000, debug=True) 
