@@ -688,7 +688,7 @@ section:first-of-type {
     position: relative;
     display: inline-block;
     width: 100%;
-    max-width: 130px;  /* Increased from 120px to match learning section */
+    max-width: 120px;
     aspect-ratio: 1;
     margin-bottom: 8px;
 }
@@ -796,8 +796,8 @@ section:first-of-type {
 
 /* Skill icons */
 .skill-logo {
-    width: 70px;  /* Increased to match learning section */
-    height: 70px;
+    width: 42px;  /* Increased from 34px */
+    height: 42px;
     object-fit: contain;
     transition: transform 0.3s ease;
 }
@@ -810,12 +810,12 @@ section:first-of-type {
 /* Mobile adjustments */
 @media (max-width: 768px) {
     .skill-circle {
-        max-width: 110px;  /* Increased to match learning section */
+        max-width: 85px;
     }
     
     .skill-logo {
-        width: 60px;  /* Increased to match learning section */
-        height: 60px;
+        width: 34px;  /* Increased from 28px */
+        height: 34px;
     }
 
     .learning .skill-logo {
@@ -826,12 +826,12 @@ section:first-of-type {
 
 @media (max-width: 380px) {
     .skill-circle {
-        max-width: 100px;  /* Increased to match learning section */
+        max-width: 80px;
     }
     
     .skill-logo {
-        width: 52px;  /* Increased to match learning section */
-        height: 52px;
+        width: 30px;  /* Increased from 25px */
+        height: 30px;
     }
 
     .learning .skill-logo {
@@ -960,7 +960,7 @@ section:first-of-type {
     }
 
     .skill-circle {
-        max-width: 110px;  /* Increased to match learning section */
+        max-width: 85px;
     }
 
     .progress-ring-circle,
@@ -1007,7 +1007,7 @@ section:first-of-type {
     }
 
     .skill-circle {
-        max-width: 100px;  /* Increased to match learning section */
+        max-width: 80px;
     }
 
     .progress-ring-circle,
