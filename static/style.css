@@ -1,10 +1,10 @@
 /* Root variables */
 :root {
     /* Light theme colors */
-    --primary-accent: #5B9BD5;
+    --primary-accent: #60A5FA;
     --secondary-accent: #94A3B8;
     --container-bg: #fff;
-    --container-bg-alt: #1a2634;
+    --container-bg-alt: #EFF6FF;  /* Changed from #1a2634 to a very light blue */
     --background: #F9FAFB;
     --heading: #374151;
     --body: #374151;
@@ -538,44 +538,43 @@ section:first-of-type {
 
 .tab-buttons {
     display: flex;
-    justify-content: center;
+    gap: 10px;
     margin-bottom: 30px;
     flex-wrap: wrap;
-    gap: 10px;
+    justify-content: center;
 }
 
 .tab-button {
-    background: #f3f6fa;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 25px;
+    background: var(--container-bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: 10px 20px;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 1em;
-    transition: all 0.3s;
-    color: var(--body);
-    box-shadow: none;
+    transition: all 0.3s ease;
     font-weight: 500;
+    font-size: 0.95rem;
 }
 
 .tab-button:hover {
-    background: var(--secondary-accent);
-    color: #fff;
-    transform: translateY(-2px);
+    background: var(--container-bg-alt);
 }
 
 .tab-button.active {
     background: var(--primary-accent);
-    color: #fff;
-    box-shadow: 0 4px 12px rgba(91,155,213,0.13);
+    color: white;
+    border-color: var(--primary-accent);
 }
 
 .tab-content {
     display: none;
-    animation: fadeIn 0.5s ease-in;
+    opacity: 0;
+    transform: translateY(20px);
 }
 
 .tab-content.active {
     display: block;
+    animation: fadeIn 0.5s ease forwards;
 }
 
 @keyframes fadeIn {
@@ -591,28 +590,27 @@ section:first-of-type {
 }
 
 .project-item {
-    background: var(--container-bg-alt);
+    background: var(--container-bg);
     border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     margin-bottom: 25px;
-    padding: 18px;  /* Reduced from 25px */
+    padding: 18px;
     transition: transform 0.2s, box-shadow 0.2s;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border);
 }
 
 .project-item:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 .project-item h3 {
     color: var(--primary-accent);
     margin: 0 0 15px 0;
-    font-size: 1.3em;
-    border-bottom: 2px solid #f0f0f0;
+    font-size: 1.17rem;
+    border-bottom: 2px solid var(--border);
     padding-bottom: 10px;
     font-weight: 600;
-    font-size: 1.17rem;  /* Reduced from 1.3rem */
 }
 
 .project-item ul {
@@ -623,7 +621,7 @@ section:first-of-type {
 .project-item li {
     margin-bottom: 10px;
     line-height: 1.6;
-    color: #555;
+    color: var(--text);
 }
 
 /* Tools & Technologies Section Styles */
@@ -689,49 +687,98 @@ section:first-of-type {
 .skill-circle {
     position: relative;
     display: inline-block;
-    margin-bottom: 15px;
-    width: 119px;  /* Reduced from 132px */
-    height: 119px;  /* Reduced from 132px */
+    width: 100%;
+    max-width: 120px;
+    aspect-ratio: 1;
+    margin-bottom: 8px;
 }
 
 .progress-ring {
     transform: rotate(-90deg);
-    width: 119px;
-    height: 119px;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
 }
 
 .progress-ring-circle {
-    transition: stroke-dashoffset 2s ease-in-out;
+    transition: stroke-dashoffset 1.5s ease-out;
     stroke-linecap: round;
     r: 51;
-    cx: 59.5;
-    cy: 59.5;
+    cx: 60;
+    cy: 60;
     fill: transparent;
     stroke: url(#skillGradient);
     stroke-width: 8;
+    transform-origin: center;
+    stroke-dasharray: 320.4; /* This will be set by JS */
+    stroke-dashoffset: 320.4; /* This will be set by JS */
 }
 
 .progress-ring-circle-bg {
     stroke: var(--skill-border);
     r: 51;
-    cx: 59.5;
-    cy: 59.5;
+    cx: 60;
+    cy: 60;
     fill: transparent;
     stroke-width: 8;
 }
 
+/* SVG Gradients */
+#skillGradient stop {
+    transition: stop-color 0.3s ease;
+}
+
 /* Learning section rings */
+.learning .skill-circle {
+    max-width: 130px;  /* Increased from 110px to accommodate larger icons */
+}
+
 .learning .progress-ring {
-    width: 90px;  /* Reduced size for learning section */
-    height: 90px;
+    width: 100%;
+    height: 100%;
 }
 
 .learning .progress-ring-circle,
 .learning .progress-ring-circle-bg {
-    r: 42;  /* Adjusted radius for learning section */
-    cx: 45;  /* Adjusted center X */
-    cy: 45;  /* Adjusted center Y */
-    stroke-width: 6;  /* Thinner stroke for smaller rings */
+    r: 51;
+    cx: 60;
+    cy: 60;
+    stroke-width: 6;
+}
+
+.learning .skill-logo {
+    width: 70px;  /* Substantially increased */
+    height: 70px;
+}
+
+.learning .skill-name {
+    font-size: 0.85em;
+}
+
+.learning .skill-rating {
+    font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+    .learning .skill-circle {
+        max-width: 110px;  /* Increased to maintain proportion */
+    }
+
+    .learning .skill-logo {
+        width: 60px;  /* Substantially increased */
+        height: 60px;
+    }
+}
+
+@media (max-width: 380px) {
+    .learning .skill-circle {
+        max-width: 100px;  /* Increased to maintain proportion */
+    }
+
+    .learning .skill-logo {
+        width: 52px;  /* Substantially increased */
+        height: 52px;
+    }
 }
 
 .skill-content {
@@ -739,57 +786,90 @@ section:first-of-type {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
-    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
+    height: 100%;
+    pointer-events: none;
 }
 
+/* Skill icons */
 .skill-logo {
-    display: block;
-    width: 27px;  /* Reduced from 30px */
-    height: 27px;  /* Reduced from 30px */
-    margin: 0 auto 6px auto;
-    transition: transform 0.3s ease;
+    width: 42px;  /* Increased from 34px */
+    height: 42px;
     object-fit: contain;
+    transition: transform 0.3s ease;
 }
 
-.skill-item:hover .skill-logo {
-    transform: scale(1.1);
+.learning .skill-logo {
+    width: 36px;  /* Increased from 30px */
+    height: 36px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .skill-circle {
+        max-width: 85px;
+    }
+    
+    .skill-logo {
+        width: 34px;  /* Increased from 28px */
+        height: 34px;
+    }
+
+    .learning .skill-logo {
+        width: 30px;  /* Increased from 25px */
+        height: 30px;
+    }
+}
+
+@media (max-width: 380px) {
+    .skill-circle {
+        max-width: 80px;
+    }
+    
+    .skill-logo {
+        width: 30px;  /* Increased from 25px */
+        height: 30px;
+    }
+
+    .learning .skill-logo {
+        width: 26px;  /* Increased from 22px */
+        height: 26px;
+    }
 }
 
 .skill-name {
     display: block;
     font-weight: 600;
-    font-size: 0.9em;
-    color: #333;
-    margin-bottom: 2px;
+    font-size: 0.9rem;
+    color: var(--text);
+    margin-bottom: 12px;
     line-height: 1.2;
-    font-size: 0.9rem;  /* Reduced from 1rem */
+    text-align: center;
 }
 
 .skill-rating {
     display: block;
-    font-size: 1.1em;
+    font-size: 1.1rem;
     color: var(--primary-accent);
     font-weight: 800;
-    margin-top: 15px;
     text-align: center;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     letter-spacing: 0.8px;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-    font-size: 1.17rem;  /* Reduced from 1.3rem */
 }
 
 /* Learning Section */
 .learning-section {
     margin-top: 50px;
     padding-top: 30px;
-    border-top: 2px solid #f0f0f0;
+    border-top: 2px solid var(--border);
 }
 
 .learning-section h3 {
     text-align: center;
-    color: #666;
+    color: var(--text);
     margin-bottom: 30px;
     font-size: 1.3em;
 }
@@ -799,10 +879,28 @@ section:first-of-type {
     gap: 20px;
 }
 
+/* Learning section styles */
 .learning .skill-circle {
-    opacity: 0.8;
-    width: 90px;  /* Reduced from 100px */
-    height: 90px;  /* Reduced from 100px */
+    max-width: 100px;
+}
+
+.learning .progress-ring {
+    width: 100%;
+    height: 100%;
+}
+
+.learning .progress-ring-circle,
+.learning .progress-ring-circle-bg {
+    r: 51;
+    cx: 60;
+    cy: 60;
+    stroke-width: 6;
+}
+
+.learning .skill-logo {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 4px;
 }
 
 .learning .skill-name {
@@ -810,13 +908,35 @@ section:first-of-type {
 }
 
 .learning .skill-rating {
-    font-size: 0.75em;
+    font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+    .learning .skill-circle {
+        max-width: 85px;
+    }
+
+    .learning .skill-logo {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 380px) {
+    .learning .skill-circle {
+        max-width: 75px;
+    }
+
+    .learning .skill-logo {
+        width: 18px;
+        height: 18px;
+    }
 }
 
 /* Animation for progress rings */
 @keyframes progressAnimation {
     from {
-        stroke-dashoffset: 326.73;
+        stroke-dashoffset: var(--initial-offset);
     }
     to {
         stroke-dashoffset: var(--final-offset);
@@ -839,18 +959,11 @@ section:first-of-type {
         padding: 10px;
     }
 
-    .progress-ring {
-        width: 85px;
-        height: 85px;
+    .skill-circle {
+        max-width: 85px;
     }
 
-    .progress-ring-circle {
-        r: 35;
-        cx: 42.5;
-        cy: 42.5;
-        stroke-width: 5;
-    }
-
+    .progress-ring-circle,
     .progress-ring-circle-bg {
         r: 35;
         cx: 42.5;
@@ -859,15 +972,31 @@ section:first-of-type {
     }
 
     .skill-name {
-        font-size: 0.9rem;
-        margin-top: 10px;
-        text-align: center;
+        font-size: 0.85rem;
+        margin-top: 8px;
     }
 
     .skill-rating {
-        font-size: 0.9rem;
-        margin-top: 5px;
-        text-align: center;
+        font-size: 0.85rem;
+        margin-top: 4px;
+    }
+
+    /* Learning section adjustments for mobile */
+    .learning .skill-circle {
+        max-width: 75px;
+    }
+
+    .learning .progress-ring-circle,
+    .learning .progress-ring-circle-bg {
+        r: 32;
+        cx: 37.5;
+        cy: 37.5;
+        stroke-width: 4;
+    }
+
+    .learning .skill-logo {
+        width: 22px;
+        height: 22px;
     }
 }
 
@@ -877,16 +1006,34 @@ section:first-of-type {
         padding: 0 10px;
     }
 
-    .progress-ring {
-        width: 80px;
-        height: 80px;
+    .skill-circle {
+        max-width: 80px;
     }
 
-    .progress-ring-circle, .progress-ring-circle-bg {
+    .progress-ring-circle,
+    .progress-ring-circle-bg {
         r: 32;
         cx: 40;
         cy: 40;
-        stroke-width: 5;
+        stroke-width: 4;
+    }
+
+    .skill-logo {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* Learning section adjustments for small mobile */
+    .learning .skill-circle {
+        max-width: 70px;
+    }
+
+    .learning .progress-ring-circle,
+    .learning .progress-ring-circle-bg {
+        r: 30;
+        cx: 35;
+        cy: 35;
+        stroke-width: 4;
     }
 }
 
@@ -1475,16 +1622,10 @@ section:first-of-type {
 
 /* Projects & Experience Prompt */
 .projects-prompt {
-    font-size: 1rem;
-    font-style: italic;
-    font-weight: 400;
-    color: #888;
-    margin: 0 0 24px 0;
+    color: var(--text);
+    opacity: 0.8;
     text-align: center;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: promptFadeUp 0.8s cubic-bezier(0.4,0,0.2,1) 0.2s forwards;
-    letter-spacing: 0.01em;
+    margin-bottom: 25px;
 }
 
 @media (max-width: 700px) {
@@ -1695,8 +1836,8 @@ h1, .resume-title, .tab-content h2 {
 } 
 
 [data-theme="dark"] .tab-button {
-    color: var(--text);
     background: var(--container-bg);
+    border-color: var(--border);
 }
 
 [data-theme="dark"] .tab-button:not(.active) {
@@ -1704,9 +1845,8 @@ h1, .resume-title, .tab-content h2 {
 }
 
 [data-theme="dark"] .tab-button.active {
-    color: var(--text);
-    background: var(--container-bg-alt);
-    border-color: var(--border);
+    background: var(--primary-accent);
+    border-color: var(--primary-accent);
 }
 
 [data-theme="dark"] .tab-button:hover, 
@@ -1904,7 +2044,7 @@ h1, .resume-title, .tab-content h2 {
     #about {
         padding-top: 81px;  /* Reduced from 90px */
     }
-}
+} 
 
 /* Main navbar styles */
 .navbar {
