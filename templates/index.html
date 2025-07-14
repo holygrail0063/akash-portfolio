@@ -28,16 +28,17 @@
                 </button>
             </div>
             <ul>
-                <li><a href="#about">About Me 🤸</a></li>
+                <li><a href="#about">About Me 🙋🏽</a></li>
                 <li><a href="#tools">Technical Skills 🖥️</a></li>
                 <li><a href="#resume">Resume 📃</a></li>
                 <li><a href="#projects">Project Highlights ⤵️</a></li>
                 <li><a href="#contact">Let's Talk 📲</a></li>
+                <li><a href="#" class="book-call" id="bookCallButton">Book a Call 🗓️</a></li>
             </ul>
         </nav>
         
         <section id="about" class="section">
-        <h1>About Me 🤸</h1>
+        <h1>About Me 🙋🏽</h1>
         <div class="about-content">
             <div class="speech-bubble">
                 <div class="typing-container">
@@ -426,11 +427,14 @@
         <div class="contact-intro">
             <p>Impressed? Let's keep the conversation going.</p>
         </div>
-        <form id="contact-form" class="contact-form" action="https://formspree.io/f/xkgblpqb" method="POST">
+        <form id="contact-form" class="contact-form" action="https://formspree.io/f/xkgblpqb" method="POST" style="opacity: 1; visibility: visible;">
             <!-- Honeypot field for bot protection -->
             <div class="honeypot-field" style="position: absolute; left: -9999px;">
                 <input type="text" name="bot-field" tabindex="-1" autocomplete="off">
             </div>
+            
+            <!-- Add form identifier -->
+            <input type="hidden" name="form-name" value="contact-form">
             
             <div class="form-group">
                 <label for="name" class="contact-label"><span class="emoji">👤</span> Name</label>
@@ -447,7 +451,7 @@
             <div class="form-group">
                 <label for="message" class="contact-label"><span class="emoji">💬</span> Message <span class="required-star">*</span></label>
                 <div class="input-wrapper">
-                    <textarea id="message" name="message" placeholder="Let's chat roles, goals, and how I can help your team." required rows="5"></textarea>
+                    <textarea id="message" name="message" placeholder="Let's chat roles, goals, and how I can help your team." required rows="3"></textarea>
                 </div>
             </div>
             
@@ -456,7 +460,7 @@
                 <div class="captcha-slider">
                     <div class="captcha-handle"></div>
                 </div>
-                <div class="captcha-text">Slide to verify you’re human</div>
+                <div class="captcha-text">Slide to verify you're human</div>
             </div>
             
             <button type="submit" class="submit-btn" id="submit-btn">
@@ -475,10 +479,130 @@
     <div class="visit-counter-widget">
         <div class="counter-circle">
             <span class="counter-icon">👥</span>
-            <span class="counter-number" id="visit-count">{{ visit_count }}</span>
+            <span class="counter-number">{{ visit_count }}</span>
         </div>
     </div>
     
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <!-- Signature -->
+            <div class="footer-signature">
+                🛠️ Made with curiosity & caffeine by Akash Kamble.
+            </div>
+
+            <!-- Social Links -->
+            <div class="footer-social">
+                <a href="mailto:Hello@AkashKamble.ca" class="footer-link" title="Email">
+                    <span class="footer-icon">📧</span>
+                </a>
+                <a href="https://www.linkedin.com/in/aka7t/" class="footer-link" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+                    <img width="48" height="48" src="https://img.icons8.com/fluency/48/linkedin.png" alt="linkedin" class="footer-icon-img"/>
+                </a>
+                <a href="https://github.com/holygrail0063" class="footer-link" title="GitHub" target="_blank" rel="noopener noreferrer">
+                    <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/github.png" alt="github" class="footer-icon-img"/>
+                </a>
+            </div>
+
+            <!-- CTA Button -->
+            <a href="#" class="footer-cta" id="hireButton">
+                👋 Want to hire me?
+            </a>
+
+            <!-- Location -->
+            <div class="footer-location">
+                📍 Toronto-based | Open to hybrid and on-site roles
+            </div>
+        </div>
+    </footer>
+
+    <!-- Hire Me Modal -->
+    <div id="hireModal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close">❌</button>
+            <h2>Schedule a Meeting</h2>
+            <form id="hireForm" action="https://formspree.io/f/mqalzyyg" method="POST">
+                <!-- Add form identifier -->
+                <input type="hidden" name="form-name" value="hire-form">
+                
+                <div class="form-group">
+                    <label for="hireName">Name <span class="required">*</span></label>
+                    <input type="text" id="hireName" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="hireEmail">Email <span class="required">*</span></label>
+                    <input type="email" id="hireEmail" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="jobLink">Job Posting Link <span class="required">*</span></label>
+                    <input type="url" id="jobLink" name="jobLink" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="about">About the Job</label>
+                    <textarea id="about" name="about" rows="3" style="vertical-align: top; padding-top: 0.6rem;"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <div class="date-label-group">
+                        <label for="date">Select Date <span class="required">*</span></label>
+                        <button type="button" class="clear-date-btn" aria-label="Clear selected date">Clear</button>
+                    </div>
+                    <input type="hidden" id="date" name="date" required>
+                    <div class="date-picker-container">
+                        <div class="date-picker-trigger">
+                            <span class="selected-date-text">Select a date</span>
+                            <button type="button" class="calendar-toggle" aria-label="Toggle calendar">📅</button>
+                        </div>
+                        <div class="date-picker" style="display: none;">
+                            <div class="date-picker-header">
+                                <button type="button" class="nav-button prev-month">&lt;</button>
+                                <span class="month-year">July 2025</span>
+                                <button type="button" class="nav-button next-month">&gt;</button>
+                            </div>
+                            <div class="weekdays">
+                                <span class="weekday">SUN</span>
+                                <span class="weekday">MON</span>
+                                <span class="weekday">TUE</span>
+                                <span class="weekday">WED</span>
+                                <span class="weekday">THU</span>
+                                <span class="weekday">FRI</span>
+                                <span class="weekday">SAT</span>
+                            </div>
+                            <div class="dates">
+                                <!-- Dates will be populated by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="time">Preferred Time (EST) <span class="required">*</span></label>
+                    <select id="time" name="time" required>
+                        <!-- Time slots will be populated by JavaScript -->
+                    </select>
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    <span class="btn-text">Schedule Meeting</span>
+                    <span class="btn-loading" style="display: none;">
+                        <span class="spinner"></span>
+                        Sending...
+                    </span>
+                </button>
+            </form>
+            <div id="formSuccess" class="form-success" style="display: none;">
+                ✅ Thanks! I'll follow up shortly.
+            </div>
+            <div id="formError" class="form-error" style="display: none;">
+                ❌ Oops! Something went wrong. Please try again.
+            </div>
+        </div>
+    </div>
+
     <script>
         function openTab(tabName) {
             // Hide all tab contents
@@ -927,7 +1051,324 @@
                 setTheme(e.matches ? 'dark' : 'light');
             }
         });
+
+        // Hire Modal Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('hireModal');
+            const modalContent = modal.querySelector('.modal-content');
+            const openButton = document.getElementById('hireButton');
+            const closeButton = modal.querySelector('.modal-close');
+            const form = document.getElementById('hireForm');
+            const dateInput = document.getElementById('date');
+            const timeSelect = document.getElementById('time');
+            const formSuccess = document.getElementById('formSuccess');
+            const formError = document.getElementById('formError');
+
+            // Populate time slots
+            function populateTimeSlots() {
+                const times = [];
+                for (let hour = 9; hour <= 18; hour++) {
+                    for (let minute of ['00', '30']) {
+                        if (hour === 18 && minute === '30') continue; // Skip 6:30 PM
+                        const period = hour >= 12 ? 'PM' : 'AM';
+                        const displayHour = hour > 12 ? hour - 12 : hour;
+                        times.push(`${displayHour}:${minute} ${period}`);
+                    }
+                }
+                
+                timeSelect.innerHTML = '<option value="">Select a time</option>' +
+                    times.map(time => `<option value="${time}">${time} EST</option>`).join('');
+            }
+
+            // Set date input constraints
+            function setDateConstraints() {
+                const today = new Date();
+                const yyyy = today.getFullYear();
+                const mm = String(today.getMonth() + 1).padStart(2, '0');
+                const dd = String(today.getDate()).padStart(2, '0');
+                
+                dateInput.min = `${yyyy}-${mm}-${dd}`;
+                dateInput.max = `${yyyy + 1}-${mm}-${dd}`;
+            }
+
+            // Validate weekday selection
+            dateInput.addEventListener('change', function() {
+                const selected = new Date(this.value);
+                if (selected.getDay() === 0 || selected.getDay() === 6) {
+                    alert('Please select a weekday (Monday-Friday)');
+                    this.value = '';
+                }
+            });
+
+            // Open modal
+            openButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            });
+
+            // Close modal
+            function closeModal() {
+                modal.classList.remove('show');
+                document.body.style.overflow = '';
+                form.reset();
+                formSuccess.style.display = 'none';
+                formError.style.display = 'none';
+            }
+
+            closeButton.addEventListener('click', closeModal);
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal || e.target.classList.contains('modal-overlay')) {
+                    closeModal();
+                }
+            });
+
+            // Handle form submission
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const formData = new FormData(form);
+                const submitBtn = form.querySelector('.submit-btn');
+                const btnText = submitBtn.querySelector('.btn-text');
+                const btnLoading = submitBtn.querySelector('.btn-loading');
+                const formSuccess = document.getElementById('formSuccess');
+                const formError = document.getElementById('formError');
+
+                // Show loading state
+                btnText.style.display = 'none';
+                btnLoading.style.display = 'inline-flex';
+                submitBtn.disabled = true;
+                formSuccess.style.display = 'none';
+                formError.style.display = 'none';
+
+                fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.ok) {
+                        form.style.display = 'none';
+                        formSuccess.style.display = 'block';
+                        formError.style.display = 'none';
+                        setTimeout(closeModal, 3000);
+                    } else {
+                        throw new Error('Form submission failed');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    formSuccess.style.display = 'none';
+                    formError.style.display = 'block';
+                })
+                .finally(() => {
+                    // Reset button state
+                    btnText.style.display = 'inline';
+                    btnLoading.style.display = 'none';
+                    submitBtn.disabled = false;
+                });
+            });
+
+            // Initialize
+            populateTimeSlots();
+            setDateConstraints();
+        });
+
+        // Book Call Button Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const bookCallButton = document.getElementById('bookCallButton');
+            const modal = document.getElementById('hireModal');
+            const modalContent = modal.querySelector('.modal-content');
+            const closeButton = modal.querySelector('.modal-close');
+            const form = document.getElementById('hireForm');
+            const formSuccess = document.getElementById('formSuccess');
+
+            // Open modal when Book Call button is clicked
+            bookCallButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            });
+
+            // Close modal when clicking outside or on close button
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal || e.target.classList.contains('modal-overlay')) {
+                    modal.classList.remove('show');
+                    document.body.style.overflow = '';
+                }
+            });
+
+            closeButton.addEventListener('click', function() {
+                modal.classList.remove('show');
+                document.body.style.overflow = '';
+            });
+
+            // Prevent modal from closing when clicking inside content
+            modalContent.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+        });
+
+        // Date Picker functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const datePickerContainer = document.querySelector('.date-picker-container');
+            const datePickerTrigger = document.querySelector('.date-picker-trigger');
+            const datePicker = document.querySelector('.date-picker');
+            const monthYearDisplay = datePicker.querySelector('.month-year');
+            const datesContainer = datePicker.querySelector('.dates');
+            const prevMonthBtn = datePicker.querySelector('.prev-month');
+            const nextMonthBtn = datePicker.querySelector('.next-month');
+            const dateInput = document.getElementById('date');
+            const clearDateBtn = document.querySelector('.clear-date-btn');
+            const calendarToggleBtn = document.querySelector('.calendar-toggle');
+            const selectedDateText = document.querySelector('.selected-date-text');
+            
+            let currentDate = new Date();
+            let selectedDate = null;
+            let isPickerOpen = false;
+
+            function updateCalendar() {
+                const year = currentDate.getFullYear();
+                const month = currentDate.getMonth();
+                
+                // Update month and year display
+                const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 
+                                  'July', 'August', 'September', 'October', 'November', 'December'];
+                monthYearDisplay.textContent = `${monthNames[month]} ${year}`;
+                
+                // Clear previous dates
+                datesContainer.innerHTML = '';
+                
+                // Get first day of month and total days
+                const firstDay = new Date(year, month, 1).getDay();
+                const totalDays = new Date(year, month + 1, 0).getDate();
+                
+                // Add empty cells for days before first day of month
+                for (let i = 0; i < firstDay; i++) {
+                    const emptyCell = document.createElement('div');
+                    emptyCell.className = 'date';
+                    datesContainer.appendChild(emptyCell);
+                }
+                
+                // Add days of month
+                for (let day = 1; day <= totalDays; day++) {
+                    const dateCell = document.createElement('div');
+                    dateCell.className = 'date';
+                    dateCell.textContent = day;
+                    
+                    const dateObj = new Date(year, month, day);
+                    const isWeekend = dateObj.getDay() === 0 || dateObj.getDay() === 6;
+                    const isPast = dateObj < new Date().setHours(0,0,0,0);
+                    const isSelected = selectedDate && 
+                                     dateObj.getDate() === selectedDate.getDate() &&
+                                     dateObj.getMonth() === selectedDate.getMonth() &&
+                                     dateObj.getFullYear() === selectedDate.getFullYear();
+                    
+                    if (isWeekend) {
+                        dateCell.classList.add('weekend');
+                    }
+                    if (isPast) {
+                        dateCell.classList.add('disabled');
+                    }
+                    if (isSelected) {
+                        dateCell.classList.add('selected');
+                    }
+                    
+                    if (!isWeekend && !isPast) {
+                        dateCell.addEventListener('click', () => {
+                            if (selectedDate) {
+                                document.querySelector('.date.selected')?.classList.remove('selected');
+                            }
+                            dateCell.classList.add('selected');
+                            selectedDate = dateObj;
+                            dateInput.value = dateObj.toISOString().split('T')[0];
+                            selectedDateText.textContent = `${monthNames[month]} ${day}, ${year}`;
+                            togglePicker(); // Auto-collapse after selection
+                        });
+                    }
+                    
+                    datesContainer.appendChild(dateCell);
+                }
+            }
+
+            function togglePicker() {
+                isPickerOpen = !isPickerOpen;
+                datePicker.style.display = isPickerOpen ? 'block' : 'none';
+                datePickerContainer.classList.toggle('open');
+                datePickerTrigger.classList.toggle('active');
+                if (isPickerOpen) {
+                    updateCalendar();
+                }
+            }
+
+            function clearSelectedDate() {
+                selectedDate = null;
+                dateInput.value = '';
+                selectedDateText.textContent = 'Select a date';
+                document.querySelector('.date.selected')?.classList.remove('selected');
+            }
+
+            // Event listeners for month navigation
+            prevMonthBtn.addEventListener('click', () => {
+                currentDate.setMonth(currentDate.getMonth() - 1);
+                updateCalendar();
+            });
+            
+            nextMonthBtn.addEventListener('click', () => {
+                currentDate.setMonth(currentDate.getMonth() + 1);
+                updateCalendar();
+            });
+
+            // Event listeners for calendar toggle
+            calendarToggleBtn.addEventListener('click', togglePicker);
+
+            // Event listeners for clear date button
+            clearDateBtn.addEventListener('click', clearSelectedDate);
+
+            // Close picker when clicking outside
+            document.addEventListener('click', function(event) {
+                if (isPickerOpen && datePicker.contains(event.target) && !datePickerTrigger.contains(event.target)) {
+                    togglePicker();
+                }
+            });
+
+            // Initialize calendar
+            updateCalendar();
+        });
+        
+        // Initialize calendar when modal opens
+        document.getElementById('hireButton').addEventListener('click', () => {
+            setTimeout(initializeCalendar, 100); // Small delay to ensure modal is rendered
+        });
+        
+        document.getElementById('bookCallButton').addEventListener('click', () => {
+            setTimeout(initializeCalendar, 100); // Small delay to ensure modal is rendered
+        });
     </script>
-    </div>
+    <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top">⬆️</button>
+    <script>
+        // Scroll to top functionality
+        const scrollToTopButton = document.getElementById('scroll-to-top');
+        
+        // Show button when user scrolls down 300px from the top
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopButton.classList.add('show');
+            } else {
+                scrollToTopButton.classList.remove('show');
+            }
+        });
+        
+        // Smooth scroll to top when button is clicked
+        scrollToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
 </html> 
