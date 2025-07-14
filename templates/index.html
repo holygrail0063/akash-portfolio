@@ -45,16 +45,13 @@
                     <span class="cursor">|</span>
                 </div>
                 <div class="bubble-content" id="bubble-content">
-                    <p class="pronunciation">(Ah-kah-shh — rhymes with "gosh," not "cash" — though I do optimize both.)</p>
+                    <p>I'm a Business Analyst who specializes in identifying systemic flaws before they become critical issues. I excel at turning ambiguity into structured solutions—translating complex requests into actionable requirements, and transforming raw data into insights that drive confident decision-making.</p>
                     
-                    <p>I'm a Business Analyst who sees the flaw in the system before it breaks. I turn chaos into clean logic, fuzzy requests into sharp requirements, and raw data into something you'll actually want to present to leadership.</p>
+                    <p>I've developed fraud detection models, automated risk reporting systems, and built decision engines that improve operational accuracy (and save time). Whether it's streamlining workflows or building dashboards that answer key business questions, I bring clarity, logic, and results to the table.</p>
                     
-                    <p>I've built fraud detection models, automated risk reports, and optimized decision engines that improve accuracy (and sleep schedules).</p>
+                    <p class="highlight">From whiteboard to rollout, I've worked closely with both developers and stakeholders to turn ideas into working solutions.</p>
                     
-                    <p class="highlight">If you've got a system, I'll find its weakness.<br>
-                    If you've got a question, I probably already made a dashboard for it.</p>
-                    
-                    <p class="location">Cambridge-based. Remote-friendly. Stakeholder-approved.</p>
+                    <p class="location">📍 Cambridge-based | 🌍 Remote-friendly | ✅ Stakeholder-approved</p>
                 </div>
             </div>
         </div>
@@ -510,14 +507,20 @@
             skillItems.forEach(item => {
                 const rating = parseFloat(item.getAttribute('data-rating'));
                 const circle = item.querySelector('.progress-ring-circle');
-                const radius = 57; // Updated radius for larger circles
+                const isLearning = item.classList.contains('learning');
+                
+                // Different radius for learning section
+                const radius = isLearning ? 42 : 51;
                 const circumference = 2 * Math.PI * radius;
+                
+                // Calculate offset based on rating (10 is max rating)
                 const offset = circumference - (rating / 10) * circumference;
                 
-                // Set initial state
+                // Set the stroke-dasharray and initial stroke-dashoffset
+                circle.style.strokeDasharray = `${circumference} ${circumference}`;
                 circle.style.strokeDashoffset = circumference;
                 
-                // Animate to final state
+                // Trigger animation
                 setTimeout(() => {
                     circle.style.strokeDashoffset = offset;
                 }, 100);
