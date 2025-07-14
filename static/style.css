@@ -31,7 +31,7 @@
 /* Theme Toggle Button Styles */
 .theme-toggle {
     position: fixed;
-    top: 20px;
+    top: 16px;
     right: 20px;
     z-index: 1001;
     background: var(--container-bg);
@@ -59,7 +59,7 @@
 
 @media (max-width: 768px) {
     .theme-toggle {
-        top: 15px;
+        top: 07px;
         right: 70px;
     }
 }
@@ -1855,5 +1855,3 @@ h1, .resume-title, .tab-content h2 {
 .navbar a:hover {
     color: var(--secondary-accent);
 } 
-
- 
