@@ -1,10 +1,10 @@
-/* === MODERN PROFESSIONAL COLOR SCHEME === */
+/* Root variables */
 :root {
     /* Light theme colors */
     --primary-accent: #5B9BD5;
     --secondary-accent: #94A3B8;
     --container-bg: #fff;
-    --container-bg-alt: #fff;
+    --container-bg-alt: #1a2634;
     --background: #F9FAFB;
     --heading: #374151;
     --body: #374151;
@@ -18,7 +18,7 @@
     --primary-accent: #60A5FA;
     --secondary-accent: #E5E7EB;
     --container-bg: #1F2937;
-    --container-bg-alt: #111827;
+    --container-bg-alt: #1a2634;
     --background: #111827;
     --heading: #FFFFFF;
     --body: #FFFFFF;
@@ -28,10 +28,30 @@
     --skill-border: #374151;
 }
 
+/* Highlight styles */
+.highlight {
+    font-weight: 600;
+    color: var(--text);
+    background: rgba(0, 188, 212, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #00bcd4;
+    margin: 1.2em 0;
+    display: block;
+    text-align: center;
+}
+
+[data-theme="dark"] .highlight {
+    color: var(--text);
+    opacity: 0.9;
+    background: rgba(0, 188, 212, 0.1);
+    border-left: 4px solid #00bcd4;
+}
+
 /* Theme Toggle Button Styles */
 .theme-toggle {
     position: fixed;
-    top: 16px;
+    top: 12px;  /* Adjusted to align with nav text */
     right: 20px;
     z-index: 1001;
     background: var(--container-bg);
@@ -59,7 +79,7 @@
 
 @media (max-width: 768px) {
     .theme-toggle {
-        top: 07px;
+        top: 12px;  /* Adjusted to match desktop position */
         right: 70px;
     }
 }
@@ -311,14 +331,13 @@ section:first-of-type {
 /* Typing Animation */
 .typing-container {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    font-size: 2.2em;
+    font-size: 1.8rem;  /* Reduced from 2rem */
     font-weight: 700;
-    color: #2d3748;
+    color: var(--heading);  /* Changed from #2d3748 to use theme variable */
     margin-bottom: 30px;
     min-height: 60px;
     display: flex;
     align-items: center;
-    font-size: 1.8rem;  /* Reduced from 2rem */
 }
 
 .cursor {
@@ -341,40 +360,10 @@ section:first-of-type {
 
 .bubble-content p {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    font-size: 1.08em;
-    margin-bottom: 1.1em;
-    color: #4B5563;
-    line-height: 1.7;
     font-size: 0.9rem;  /* Reduced from 1rem */
     margin: 13.5px 0;  /* Reduced from 15px */
-}
-
-.pronunciation {
-    font-style: italic;
-    color: #718096;
-    font-size: 1em;
-    margin-bottom: 25px;
-    border-left: 3px solid #00bcd4;
-    padding-left: 15px;
-    background: rgba(0, 188, 212, 0.05);
-    padding: 10px 18px;
-    border-radius: 8px;
-    font-size: 1.05em;
-    margin-bottom: 1.2em;
-    font-style: italic;
-    font-weight: 500;
-    display: inline-block;
-}
-
-.highlight {
-    font-weight: 600;
-    color: #2d3748;
-    background: #E1F0FA;
-    padding: 12px 20px;
-    border-radius: 8px;
-    border-left: 5px solid #5B9BD5;
-    margin: 1.2em 0;
-    display: block;
+    color: var(--text);  /* Changed from #4B5563 to use theme variable */
+    line-height: 1.7;
 }
 
 .location {
@@ -714,16 +703,35 @@ section:first-of-type {
 .progress-ring-circle {
     transition: stroke-dashoffset 2s ease-in-out;
     stroke-linecap: round;
-    r: 51;  /* Reduced from 57 */
-    cx: 59.5;  /* Reduced from 66 */
-    cy: 59.5;  /* Reduced from 66 */
+    r: 51;  /* Adjusted radius */
+    cx: 59.5;  /* Center X coordinate */
+    cy: 59.5;  /* Center Y coordinate */
+    fill: transparent;
+    stroke: url(#skillGradient);
+    stroke-width: 8;
 }
 
 .progress-ring-circle-bg {
     stroke: var(--skill-border);
-    r: 51;  /* Reduced from 57 */
-    cx: 59.5;  /* Reduced from 66 */
-    cy: 59.5;  /* Reduced from 66 */
+    r: 51;  /* Adjusted radius */
+    cx: 59.5;  /* Center X coordinate */
+    cy: 59.5;  /* Center Y coordinate */
+    fill: transparent;
+    stroke-width: 8;
+}
+
+/* Learning section rings */
+.learning .progress-ring {
+    width: 90px;  /* Reduced size for learning section */
+    height: 90px;
+}
+
+.learning .progress-ring-circle,
+.learning .progress-ring-circle-bg {
+    r: 42;  /* Adjusted radius for learning section */
+    cx: 45;  /* Adjusted center X */
+    cy: 45;  /* Adjusted center Y */
+    stroke-width: 6;  /* Thinner stroke for smaller rings */
 }
 
 .skill-content {
@@ -866,12 +874,14 @@ section:first-of-type {
     margin: 0;
 }
 
+/* Contact form styles */
 .contact-form {
     display: flex;
     flex-direction: column;
+    align-items: center;
     max-width: 500px;
     margin: 0 auto;
-    gap: 10px; /* reduced from 20px to 10px */
+    gap: 10px;
     opacity: 0;
     transform: translateY(30px);
     animation: formFadeIn 0.8s ease-out 0.3s forwards;
@@ -889,10 +899,12 @@ section:first-of-type {
 }
 
 .form-group {
+    width: 100%;
     margin-bottom: 0;
 }
 
 .input-wrapper {
+    width: 100%;
     margin-bottom: 0;
 }
 
@@ -938,17 +950,19 @@ section:first-of-type {
 }
 
 .submit-btn {
+    width: auto;
+    min-width: 200px;
+    margin: 10px auto;
     background: var(--primary-accent);
     color: white;
     border: none;
-    padding: 11px 27px;  /* Reduced from 12px 30px */
+    padding: 11px 14px;
     border-radius: 12px;
-    font-size: 0.9rem;  /* Reduced from 1rem */
+    font-size: 0.9rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 188, 212, 0.3);
-    margin-top: 10px;
     position: relative;
     overflow: hidden;
     display: flex;
@@ -1357,8 +1371,8 @@ section:first-of-type {
     }
     
     .submit-btn {
-        padding: 12px 25px;
-        font-size: 1rem;
+        padding: 11px 14px;  /* Match mobile input padding */
+        font-size: 0.9rem;  /* Match mobile input font size */
     }
     
     .contact-intro p {
@@ -1576,7 +1590,9 @@ h1, .resume-title, .tab-content h2 {
 
 [data-theme="dark"] .highlight {
     color: var(--text);
-    background: rgba(255, 255, 255, 0.1);
+    opacity: 0.9;
+    background: rgba(0, 188, 212, 0.1);
+    border-left: 4px solid #00bcd4;
 }
 
 [data-theme="dark"] .pronunciation {
@@ -1854,14 +1870,6 @@ h1, .resume-title, .tab-content h2 {
 
 .navbar a:hover {
     color: var(--secondary-accent);
-} 
-
-[data-theme="dark"] .typing-container {
-    color: var(--text);
-}
-
-[data-theme="dark"] .cursor {
-    color: var(--primary-accent);
 } 
 
  
