@@ -652,6 +652,12 @@ section:first-of-type {
     margin-bottom: 40px;
 }
 
+/* Make learning grid match main grid */
+.learning-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+}
+
 .skill-item {
     display: flex;
     flex-direction: column;
@@ -688,7 +694,7 @@ section:first-of-type {
     position: relative;
     display: inline-block;
     width: 100%;
-    max-width: 120px;
+    max-width: 130px;
     aspect-ratio: 1;
     margin-bottom: 8px;
 }
@@ -710,8 +716,8 @@ section:first-of-type {
     stroke: url(#skillGradient);
     stroke-width: 8;
     transform-origin: center;
-    stroke-dasharray: 320.4; /* This will be set by JS */
-    stroke-dashoffset: 320.4; /* This will be set by JS */
+    stroke-dasharray: 320.4;
+    stroke-dashoffset: 320.4;
 }
 
 .progress-ring-circle-bg {
@@ -730,7 +736,7 @@ section:first-of-type {
 
 /* Learning section rings */
 .learning .skill-circle {
-    max-width: 130px;  /* Increased from 110px to accommodate larger icons */
+    max-width: 130px;  /* Increased from 110px to match learning section */
 }
 
 .learning .progress-ring {
@@ -794,49 +800,65 @@ section:first-of-type {
     pointer-events: none;
 }
 
-/* Skill icons */
+/* Standardized icon sizes */
 .skill-logo {
-    width: 42px;  /* Increased from 34px */
-    height: 42px;
+    width: 70px;
+    height: 70px;
     object-fit: contain;
     transition: transform 0.3s ease;
 }
 
-.learning .skill-logo {
-    width: 36px;  /* Increased from 30px */
-    height: 36px;
+/* Remove any specific overrides for learning section - use same styles as main skills */
+.learning .skill-circle {
+    /* Inherits from .skill-circle */
 }
 
-/* Mobile adjustments */
+.learning .progress-ring {
+    /* Inherits from .progress-ring */
+}
+
+.learning .progress-ring-circle,
+.learning .progress-ring-circle-bg {
+    /* Inherits from main circle styles */
+}
+
+.learning .skill-logo {
+    /* Inherits from .skill-logo */
+}
+
+/* Mobile adjustments - consistent across all sections */
 @media (max-width: 768px) {
+    .skill-grid,
+    .learning-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 0 15px;
+    }
+
     .skill-circle {
-        max-width: 85px;
+        max-width: 110px;
     }
     
     .skill-logo {
-        width: 34px;  /* Increased from 28px */
-        height: 34px;
-    }
-
-    .learning .skill-logo {
-        width: 30px;  /* Increased from 25px */
-        height: 30px;
+        width: 60px;
+        height: 60px;
     }
 }
 
 @media (max-width: 380px) {
+    .skill-grid,
+    .learning-grid {
+        gap: 15px;
+        padding: 0 10px;
+    }
+
     .skill-circle {
-        max-width: 80px;
+        max-width: 100px;
     }
     
     .skill-logo {
-        width: 30px;  /* Increased from 25px */
-        height: 30px;
-    }
-
-    .learning .skill-logo {
-        width: 26px;  /* Increased from 22px */
-        height: 26px;
+        width: 52px;
+        height: 52px;
     }
 }
 
@@ -875,62 +897,61 @@ section:first-of-type {
 }
 
 .learning-grid {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
 }
 
-/* Learning section styles */
-.learning .skill-circle {
-    max-width: 100px;
-}
-
-.learning .progress-ring {
-    width: 100%;
-    height: 100%;
-}
-
+/* Remove all old learning styles */
+.learning .skill-circle,
+.learning .progress-ring,
 .learning .progress-ring-circle,
-.learning .progress-ring-circle-bg {
-    r: 51;
-    cx: 60;
-    cy: 60;
-    stroke-width: 6;
-}
-
-.learning .skill-logo {
-    width: 24px;
-    height: 24px;
-    margin-bottom: 4px;
-}
-
-.learning .skill-name {
-    font-size: 0.85em;
-}
-
+.learning .progress-ring-circle-bg,
+.learning .skill-logo,
+.learning .skill-name,
 .learning .skill-rating {
-    font-size: 0.9em;
+    /* Remove all specific styles to inherit from main skills */
 }
 
+/* Ensure learning section uses same styles as main skills */
+.learning-section .skill-circle {
+    max-width: 130px;
+}
+
+.learning-section .skill-logo {
+    width: 70px;
+    height: 70px;
+}
+
+/* Mobile adjustments */
 @media (max-width: 768px) {
-    .learning .skill-circle {
-        max-width: 85px;
+    .learning-section .skill-circle {
+        max-width: 110px;
     }
 
-    .learning .skill-logo {
-        width: 20px;
-        height: 20px;
+    .learning-section .skill-logo {
+        width: 60px;
+        height: 60px;
     }
 }
 
 @media (max-width: 380px) {
-    .learning .skill-circle {
-        max-width: 75px;
+    .learning-section .skill-circle {
+        max-width: 100px;
     }
 
-    .learning .skill-logo {
-        width: 18px;
-        height: 18px;
+    .learning-section .skill-logo {
+        width: 52px;
+        height: 52px;
     }
+}
+
+/* Remove any other conflicting learning styles */
+.learning-section .progress-ring-circle,
+.learning-section .progress-ring-circle-bg {
+    r: 51;
+    cx: 60;
+    cy: 60;
+    stroke-width: 8;
 }
 
 /* Animation for progress rings */
@@ -960,7 +981,7 @@ section:first-of-type {
     }
 
     .skill-circle {
-        max-width: 85px;
+        max-width: 110px;  /* Increased to match learning section */
     }
 
     .progress-ring-circle,
@@ -1007,7 +1028,7 @@ section:first-of-type {
     }
 
     .skill-circle {
-        max-width: 80px;
+        max-width: 100px;  /* Increased to match learning section */
     }
 
     .progress-ring-circle,
