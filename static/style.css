@@ -1855,3 +1855,13 @@ h1, .resume-title, .tab-content h2 {
 .navbar a:hover {
     color: var(--secondary-accent);
 } 
+
+[data-theme="dark"] .typing-container {
+    color: var(--text);
+}
+
+[data-theme="dark"] .cursor {
+    color: var(--primary-accent);
+} 
+
+ 
