@@ -3641,3 +3641,19 @@ h1, .resume-title, .tab-content h2 {
 [data-theme="dark"] .date:not(.disabled):hover {
     background: rgba(var(--primary-accent-rgb), 0.2);
 }
+
+[data-theme="dark"] .modal-content h2,
+[data-theme="dark"] .form-group label,
+[data-theme="dark"] .date-label-group label {
+    color: #7dd3fc; /* Light blue color */
+}
+
+[data-theme="dark"] .required {
+    color: #ff6b6b; /* Keeping the required asterisk a different color for visibility */
+}
+
+/* Ensure the form labels maintain proper contrast */
+[data-theme="dark"] .form-group label {
+    font-weight: 500;
+    opacity: 0.95;
+}
