@@ -569,6 +569,22 @@ section:first-of-type {
         height: 68vh;
         max-height: 550px;
         overflow: hidden;
+        width: 100%;
+        max-width: 100vw;
+    }
+}
+@media (max-width: 768px) {
+    .resume-viewer-container {
+        width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+    
+    .resume-viewer {
+        width: 100%;
+        max-width: calc(100vw - 20px);
+        overflow-x: hidden;
+        overflow-y: auto;
     }
 }
 @media (max-width: 600px) {
@@ -579,11 +595,17 @@ section:first-of-type {
         font-size: 1rem;
         padding: 0 0.5em;
     }
+    .resume-viewer-container {
+        padding: 0 15px;
+    }
     .resume-viewer {
         height: 70vh;
         max-height: 500px;
         border-radius: 0.7em;
-        overflow: hidden;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 100%;
+        max-width: calc(100vw - 30px);
     }
     .resume-download-btn {
         font-size: 1rem;
@@ -2368,11 +2390,11 @@ h1, .resume-title, .tab-content h2 {
     }
 }
 
-/* Scroll to Top Button - positioned above counter */
+/* Scroll to Top Button - positioned exactly above counter */
 .scroll-to-top {
     position: fixed;
-    bottom: 50px; /* Position above the counter */
-    right: 20px;
+    bottom: 53px; /* Positioned exactly above the counter (15px + 28px + 10px gap) */
+    right: 20px; /* Matches counter horizontal position */
     background-color: transparent;
     color: var(--text);
     width: 35px;
@@ -2413,8 +2435,8 @@ h1, .resume-title, .tab-content h2 {
 /* Mobile adjustments for scroll button */
 @media (max-width: 768px) {
     .scroll-to-top {
-        bottom: 45px; /* Slightly closer on mobile */
-        right: 15px;
+        bottom: 50px; /* Positioned exactly above counter on mobile (15px + 25px + 10px gap) */
+        right: 15px; /* Matches counter horizontal position on mobile */
         width: 30px;
         height: 30px;
         line-height: 30px;
@@ -2672,27 +2694,6 @@ h1, .resume-title, .tab-content h2 {
     border-color: var(--border);
 }
 
-/* Scroll to Top Button - positioned above counter */
-.scroll-to-top {
-    position: fixed;
-    bottom: 50px; /* Position above the counter */
-    right: 20px;
-    background-color: transparent;
-    color: var(--text);
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
-    display: none;
-    font-size: 22px;
-    transition: all 0.3s ease;
-    z-index: 1000;
-    padding: 0;
-    line-height: 35px;
-    backdrop-filter: blur(4px);
-}
-
 /* Mobile adjustments */
 @media (max-width: 768px) {
     .visit-counter-widget {
@@ -2709,15 +2710,6 @@ h1, .resume-title, .tab-content h2 {
     
     .counter-number {
         font-size: 8px;
-    }
-    
-    .scroll-to-top {
-        bottom: 45px; /* Slightly closer on mobile */
-        right: 15px;
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
-        font-size: 20px;
     }
 } 
 
