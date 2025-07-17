@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Akash Portfolio</title>
     <link rel="stylesheet" href="/static/style.css">
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
@@ -29,11 +29,11 @@
             </div>
             <ul>
                 <li><a href="#about">About Me 🙋🏽</a></li>
-                <li><a href="#tools">Technical Skills 🖥️</a></li>
+                <li><a href="#tools">Technical Skills 💻</a></li>
                 <li><a href="#resume">Resume 📃</a></li>
-                <li><a href="#projects">Project Highlights ⤵️</a></li>
-                <li><a href="#contact">Let's Talk 📲</a></li>
-                <li><a href="#" class="book-call" id="bookCallButton">Book a Call 🗓️</a></li>
+                <li><a href="#projects">Project Highlights ⬇️</a></li>
+                <li><a href="#contact">Let's Talk 🗣️</a></li>
+                <li><a href="#" class="book-call" id="bookCallButton">Book a Call 📅</a></li>
             </ul>
         </nav>
         
@@ -46,9 +46,10 @@
                     <span class="cursor">|</span>
                 </div>
                 <div class="bubble-content" id="bubble-content">
-                    <p>I'm a Business Analyst who spots system flaws before they become expensive surprises. I turn chaos into clean logic, fuzzy ideas into clear requirements, and unruly data into insights that leadership can actually use. Whether it's building fraud detection models, automating risk reports, or fine-tuning decision engines, I focus on real-world solutions that don't just look good in a slide deck.</p>
-                    
-                    <p>I don't just write requirements and toss them over the fence. I've built internal portals from scratch and teamed up with developers to fix, upgrade, or completely reinvent systems. I can think like a dev when it counts and mapping user journeys, reviewing APIs, or suggesting front-end tweaks that make things click. Business-first, tech-savvy, and just curious enough to ask the questions no one else does.</p>
+                    <p class="highlight">(Ah-kah-shh) — not "A-cash." It means sky🌌, appropriate, since I prefer to fix things before they hit the ground.</p>
+                    <p>I'm a Business Analyst who sees the flaw in the system before it breaks. I turn chaos into clean logic, fuzzy requests into sharp requirements, and raw data into something you'll actually want to present to leadership.</p>
+
+                    <p>I've built fraud detection models, automated risk reports, and optimized decision engines that improve accuracy (and sleep schedules).</p>
                     
                     <p class="highlight">From whiteboard to rollout, I've worked closely with both developers and stakeholders to turn ideas into working solutions.</p>
                     
@@ -66,7 +67,7 @@
     <section id="tools" class="section">
         <h1>Technical Skills 🖥️</h1>
         <div class="tools-intro">
-            <p>These are my self-rated skill levels based on how often, how confidently, and how creatively I've used each tool in real-world projects.</p>
+            <p>These are my self-rated skill levels — based on how often, how confidently, and how creatively I've used each tool in real-world projects.</p>
         </div>
         <div class="skills-container">
             <div class="skill-grid">
@@ -283,7 +284,7 @@
         </div>
     </section>
     <section id="resume" class="section">
-        <h1 class="resume-title">📃 Resume</h1>
+        <h1 class="resume-title">Resume 📃 </h1>
         <div class="resume-intro">
             No time to scroll? Grab the TL;DR version — fresh, sharp, and recruiter-approved.
         </div>
@@ -302,7 +303,7 @@
     </section>
     <section id="projects" class="section">
         <h1>Project Highlights ⤵️</h1>
-        <div class="projects-prompt animated-prompt">I wear more than one hat, click each tab to see where I’ve added value.</div>
+        <div class="projects-prompt animated-prompt">I wear more than one hat — click each tab to see where I’ve added value.</div>
         <div class="tab-container">
             <div class="tab-buttons">
                 <button class="tab-button active" onclick="openTab('business')">Business & Data Analysis</button>
@@ -312,105 +313,120 @@
             
             <div class="tab-content-container">
                 <section id="business" class="tab-content active">
-                    <h2>Business & Data Analysis</h2>
+                    <h2>💽 Business & Data Analysis</h2>
+
                     <div class="project-item">
-                        <h3>POS System Enhancements (Core Lending Platform)</h3>
+                        <h3>✅ Bonus Points Program – Performance-Based Rewards System</h3>
                         <ul>
-                            <li>Gathered and translated business needs into detailed BRDs, FRDs, and SRDs for POS system upgrades and loan approval workflow improvements.</li>
-                            <li>Facilitated requirement workshops with Operations, Lending, and Compliance teams to define scope and priorities.</li>
-                            <li>Used SQL and Excel for ad hoc data exploration, trend analysis, and customer behavior profiling to inform product strategy.</li>
-                            <li>Supported decision-making by delivering insights on application volumes, funding delays, and customer churn indicators.</li>
+                            <li>Led the end-to-end design of an internal bonus points program to incentivize staff behavior linked to KPIs. Collaborated cross-functionally with Marketing, Compliance, and Engineering to define point logic, design a clean user interface, and ensure data integrity. Used SQL to pull performance metrics, Power BI for visualization, and Excel to simulate redemption scenarios.</li>
+                            <li>➡️ Boosted employee engagement by 35% and provided leadership with real-time redemption and performance analytics.</li>
                         </ul>
                     </div>
+                    
                     <div class="project-item">
-                        <h3>Bonus Points Rewards Program (Internal Sales Engagement Portal)</h3>
+                        <h3>✅ POS System Optimization & Requirements Management</h3>
                         <ul>
-                            <li>Defined business rules for bonus accrual, redemption, and tier logic based on employee sales performance, loan volume, and target achievements.</li>
-                            <li>Designed process maps, portal wireframes, and user flow diagrams to guide development of the internal bonus tracking portal.</li>
-                            <li>Built the portal using Python Flask with integration to POS data for real-time loan tracking and sales forecasting.</li>
-                            <li>Conducted internal feedback sessions and performance analysis to optimize rule structure and communication strategy.</li>
-                            <li>Led UAT, launch coordination, and post-rollout enhancements to improve employee adoption and drive higher loan conversions.</li>
+                            <li>Captured business needs from frontline stakeholders and transformed them into actionable requirements using Jira and Confluence. Authored BRDs, SRDs, and user stories while leading UAT cycles and coordinating regression testing with QA.</li>
+                            <li>➡️ Helped deploy multiple feature updates to the POS system, reducing defect rates by 30% and enhancing transaction speed for retail operations.</li>
                         </ul>
                     </div>
+                    
                     <div class="project-item">
-                        <h3>Direct Deposit Rollout (Operational Efficiency Project)</h3>
+                        <h3>✅ Decision Engine Enhancement for Lending Logic</h3>
                         <ul>
-                            <li>Drafted business process documentation and designed end-to-end workflows for integrating Direct Deposit into both online and in-store lending processes.</li>
-                            <li>Assessed dependencies and coordinated implementation with third-party processors and in-house IT.</li>
-                            <li>Delivered training and communication guides to branch staff, ensuring smooth transition with minimal support queries.</li>
+                            <li>Integrated regional rent/mortgage data to recalibrate the debt-to-income ratio within the lending model. Worked closely with developers and data scientists to test 10+ iterations of credit scoring logic in an agile framework. Tools used included SQL, Lucidchart, and internal testing dashboards.</li>
+                            <li>➡️ Improved credit risk accuracy, resulting in a 15% reduction in underperforming loans and faster onboarding for eligible customers.</li>
                         </ul>
                     </div>
+                    
                     <div class="project-item">
-                        <h3>Decision Engine Model Optimization</h3>
+                        <h3>✅ Digital Disbursement (Direct Deposit & Interac e-Transfer)</h3>
                         <ul>
-                            <li>Analyzed Ontario rental data, customer income, and loan repayment history to fine-tune the lending decision engine's risk thresholds.</li>
-                            <li>Conducted simulations and scenario testing on 10+ iterations to measure approval rates, risk exposure, and model responsiveness.</li>
-                            <li>Presented impact analysis to underwriting and leadership to guide adoption of more accurate approval logic.</li>
+                            <li>Scoped and delivered the requirements for launching a cashless disbursement feature across online and retail platforms. Created user flows, drafted compliance documentation, and oversaw QA testing of deposit and e-transfer integrations.</li>
+                            <li>➡️ Achieved 40% customer adoption within the first quarter and significantly lowered in-store cash handling risks.</li>
                         </ul>
+                    </div>
+                    
+                    <div class="project-item">
+                        <h3>🛠️ Tools & Tech: SQL, Power BI, Excel, Jira, Confluence, Lucidchart, Agile (Scrum)</h3>
                     </div>
                 </section>
                 <section id="risk" class="tab-content">
-                    <h2>Risk and Compliance</h2>
+                    <h2> ☣️ Risk and Compliance</h2>
+                    
                     <div class="project-item">
-                        <h3>Fraud Prevention Rules Development</h3>
+                        <h3>✅ Fraud Rule Development – Preventive Risk Analytics</h3>
                         <ul>
-                            <li>Used SQL to analyze teller transactions, customer behavior, and repeat application patterns to identify suspicious activity.</li>
-                            <li>Developed and deployed 15+ custom fraud detection rules—covering anomalies such as transaction velocity, geographic inconsistencies, and behavioral red flags.</li>
-                            <li>Designed test cases using historical fraud data and refined rule thresholds to minimize false positives while increasing fraud capture rate.</li>
-                            <li>Delivered reporting dashboards to senior leadership for fraud pattern monitoring and policy improvement.</li>
+                            <li>Analyzed teller transactions and behavioral data using SQL to identify suspicious activity across various fraud types (identity manipulation, collusion, repeated refunds, etc.). Partnered with stakeholders to write 15+ logic-driven fraud rules integrated into the POS and decision engine.</li>
+                            <li>➡️ Reduced fraudulent transaction volume by 25% and established early warning alerts for recurring high-risk behaviors.</li>
                         </ul>
                     </div>
+                    
                     <div class="project-item">
-                        <h3>Insider Risk Monitoring & Reporting</h3>
+                        <h3>✅ Insider Risk Reporting – Leadership Dashboards</h3>
                         <ul>
-                            <li>Built insider risk logic to flag internal misuse of authority, unauthorized data access, and override abuse by staff.</li>
-                            <li>Created and presented risk reports in Power BI with metrics on insider threat indicators, resolution timelines, and recurring violation types.</li>
-                            <li>Partnered with Compliance and HR to refine controls and define SOPs for employee investigations and case reviews.</li>
-                            <li>Delivered monthly updates directly to the CEO and senior leaders, driving changes in training, policy, and system access.</li>
+                            <li>Built monthly dashboards in Power BI to monitor insider threat cases, policy violations, and code-of-conduct breaches. Pulled raw case data using SQL, defined KPIs (e.g., Avg Resolution Days, % On-Time Closures), and added commentary for executive presentations.</li>
+                            <li>➡️ Enabled faster response to open investigations and drove SOP changes in high-volume case types like Sales Practice and Conflict of Interest.</li>
                         </ul>
                     </div>
+                    
                     <div class="project-item">
-                        <h3>Backup Bank Verification Integration (Flinks)</h3>
+                        <h3>✅ Flinks API Integration – Secondary Bank Verification</h3>
                         <ul>
-                            <li>Performed vendor evaluation and due diligence to support adding Flinks as a secondary bank verification provider for risk mitigation.</li>
-                            <li>Created risk-impact assessment comparing data coverage, latency, and failure recovery across providers.</li>
-                            <li>Reduced operational risk by enabling dual-verification routing logic during peak volumes or vendor downtime.</li>
+                            <li>Evaluated and integrated Flinks as a secondary bank verification provider to reduce verification drop-offs. Conducted API validation using Postman, reviewed failed handoffs, and tested customer workflows across the core platform.</li>
+                            <li>➡️ Improved customer onboarding success rate by 18% and reduced manual escalation cases.</li>
                         </ul>
+                    </div>
+                    
+                    <div class="project-item">
+                        <h3>✅ SOP & Escalation Insights – Targeted Process Improvements</h3>
+                        <ul>
+                            <li>Analyzed case resolution delays using historical data and KPI dashboards. Identified long bottlenecks in Sales Practice and Conflict of Interest cases, leading to SOP refinements and updated escalation training.</li>
+                            <li>➡️ Cut average case resolution time by 20+ days in key categories.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-item">
+                        <h3>🛠️ Tools & Tech: Power BI, SQL, Excel, Postman, Internal CRM Logs</h3>
                     </div>
                 </section>
                 <section id="dev" class="tab-content">
-                    <h2>Development & Testing</h2>
+                    <h2>🧪 Development & Testing</h2>
+                    
                     <div class="project-item">
-                        <h3>Software Requirement Documentation & Collaboration</h3>
+                        <h3>✅ QA Testing & Regression Management</h3>
                         <ul>
-                            <li>Authored and maintained BRDs, SRDs, and FRDs in collaboration with developers and QA for system updates and product launches.</li>
-                            <li>Mapped API integration flows, field mappings, and validation logic for backend processing and UI changes.</li>
-                            <li>Worked in Agile sprints, refining backlog items, defining acceptance criteria, and managing change requests during development.</li>
+                            <li>Worked alongside QA engineers to plan and execute regression test cases for POS features, lending logic changes, and fraud rule deployments. Logged bugs in Jira, tracked release timelines, and created checklists to ensure consistent test coverage.</li>
+                            <li>➡️ Reduced release time for major POS updates by 30% and minimized post-production rollbacks.</li>
                         </ul>
                     </div>
+                    
                     <div class="project-item">
-                        <h3>User Acceptance Testing (UAT) & Functional Testing</h3>
+                        <h3>✅ UAT Ownership & Sprint Testing</h3>
                         <ul>
-                            <li>Designed UAT scripts and executed functional testing across multiple lending modules, ensuring alignment with requirements and policy.</li>
-                            <li>Logged issues in JIRA and coordinated resolution with developers, QA analysts, and business stakeholders.</li>
-                            <li>Verified data integrity across loan origination workflows, fraud rule triggers, and API responses.</li>
-                            <li>Supported rollout planning and hypercare post-deployment, reducing support tickets by addressing edge cases pre-release.</li>
+                            <li>Drafted acceptance criteria and user scenarios, participated in daily standups and retros, and drove UAT cycles in collaboration with stakeholders. Used Excel to monitor test pass rates and manage defect resolution priorities.</li>
+                            <li>➡️ Ensured smooth delivery across 15+ sprint releases with minimal blocker issues at launch.</li>
                         </ul>
                     </div>
+                    
                     <div class="project-item">
-                        <h3>API Integration – Flinks Bank Verification</h3>
+                        <h3>✅ API Testing (Flinks, Verification Services)</h3>
                         <ul>
-                            <li>Collaborated with developers to integrate Flinks API, write data transformation logic, and ensure compatibility with existing systems.</li>
-                            <li>Created UI mockups and logic for HTML report generation, making bank data actionable for underwriters and front-line staff.</li>
-                            <li>Conducted sandbox testing with real-world edge cases to ensure response handling, fallback logic, and error messaging were robust.</li>
+                            <li>Executed test requests in Postman to verify third-party service endpoints, validate data payloads, and handle error scenarios. Documented test results and escalated inconsistencies to developers for patching.</li>
+                            <li>➡️ Enabled seamless integration of bank verification APIs with zero post-launch disruption.</li>
                         </ul>
                     </div>
+                    
                     <div class="project-item">
-                        <h3>Automation & Tooling</h3>
+                        <h3>✅ Data Cleanup & Report Validation</h3>
                         <ul>
-                            <li>Used Python and UiPath to automate repetitive workflows like fraud alert generation, report creation, and data validation.</li>
-                            <li>Reduced manual workload on underwriting and compliance teams by introducing bots to flag risky applications in real time.</li>
+                            <li>Performed structured data audits using SQL to validate critical metrics powering fraud models and executive dashboards. Identified and corrected nulls, duplicates, and data mismatches before final deployment.</li>
+                            <li>➡️ Maintained data integrity across internal reporting pipelines and decision engines.</li>
                         </ul>
+                    </div>
+                    
+                    <div class="project-item">
+                        <h3>🛠️ Tools & Tech: Jira, SQL, Excel, Postman, QA Scripts, UAT Playbooks</h3>
                     </div>
                 </section>
             </div>
@@ -514,10 +530,10 @@
                     <span class="footer-icon">📧</span>
                 </a>
                 <a href="https://www.linkedin.com/in/aka7t/" class="footer-link" title="LinkedIn" target="_blank" rel="noopener noreferrer">
-                    <img width="48" height="48" src="https://img.icons8.com/fluency/48/linkedin.png" alt="linkedin" class="footer-icon-img"/>
+                    <img src="https://img.icons8.com/fluency/48/linkedin.png" alt="linkedin" class="footer-icon-img"/>
                 </a>
                 <a href="https://github.com/holygrail0063" class="footer-link" title="GitHub" target="_blank" rel="noopener noreferrer">
-                    <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/github.png" alt="github" class="footer-icon-img"/>
+                    <img src="https://img.icons8.com/ios-glyphs/30/github.png" alt="github" class="footer-icon-img"/>
                 </a>
             </div>
 
@@ -528,7 +544,7 @@
 
             <!-- Location -->
             <div class="footer-location">
-                📍 Toronto-based | Open to hybrid & on-site roles
+                📍 Toronto-based | Open to hybrid and on-site roles
             </div>
         </div>
     </footer>
@@ -1031,13 +1047,13 @@
         const sunIcon = document.querySelector('.sun-icon');
         const moonIcon = document.querySelector('.moon-icon');
 
-        // Check for saved theme preference, otherwise use system preference
+        // Check for saved theme preference, otherwise default to dark
         const getPreferredTheme = () => {
             const savedTheme = localStorage.getItem('theme');
             if (savedTheme) {
                 return savedTheme;
             }
-            return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            return 'dark'; // Default to dark theme
         };
 
         // Apply theme to document
@@ -1070,6 +1086,62 @@
                 setTheme(e.matches ? 'dark' : 'light');
             }
         });
+
+        // Navigation highlighting based on scroll position
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.navbar a[href^="#"]');
+
+        function highlightNav() {
+            let current = '';
+            const scrollY = window.pageYOffset;
+            const windowHeight = window.innerHeight;
+            const navbarHeight = 80; // Account for navbar height
+
+            // Find which section is currently most visible
+            let maxVisibility = 0;
+            
+            sections.forEach(section => {
+                const sectionHeight = section.offsetHeight;
+                const sectionTop = section.offsetTop - navbarHeight;
+                const sectionBottom = sectionTop + sectionHeight;
+                const sectionId = section.getAttribute('id');
+
+                // Calculate how much of the section is visible
+                const viewportTop = scrollY;
+                const viewportBottom = scrollY + windowHeight;
+                
+                const visibleTop = Math.max(sectionTop, viewportTop);
+                const visibleBottom = Math.min(sectionBottom, viewportBottom);
+                const visibleHeight = Math.max(0, visibleBottom - visibleTop);
+                const visibilityRatio = visibleHeight / Math.min(sectionHeight, windowHeight);
+
+                // If this section has more visibility than previous ones, select it
+                if (visibilityRatio > maxVisibility && visibilityRatio > 0.3) {
+                    maxVisibility = visibilityRatio;
+                    current = sectionId;
+                }
+            });
+
+            // Clear all active states first
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+
+            // Add active class to the most visible section
+            if (current) {
+                navLinks.forEach(link => {
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        }
+
+        // Add scroll event listener
+        window.addEventListener('scroll', highlightNav);
+        
+        // Highlight on page load
+        document.addEventListener('DOMContentLoaded', highlightNav);
 
         // Hire Modal Functionality
         document.addEventListener('DOMContentLoaded', function() {
@@ -1375,7 +1447,19 @@
             });
 
             // Event listeners for calendar toggle
-            calendarToggleBtn.addEventListener('click', togglePicker);
+            calendarToggleBtn.addEventListener('click', function(event) {
+                event.stopPropagation(); // Prevent event bubbling
+                togglePicker();
+            });
+            
+            // Make entire date picker trigger clickable
+            datePickerTrigger.addEventListener('click', function(event) {
+                // Don't open if clicking the clear button or calendar toggle button
+                if (!event.target.classList.contains('clear-date-btn') && 
+                    !event.target.classList.contains('calendar-toggle')) {
+                    togglePicker();
+                }
+            });
 
             // Event listeners for clear date button
             clearDateBtn.addEventListener('click', clearSelectedDate);
