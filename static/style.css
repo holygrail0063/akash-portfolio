@@ -2217,7 +2217,7 @@ section:first-of-type {
 .case-study-modal.show {
     display: grid;
     place-items: center;
-    padding: 24px;
+    padding: clamp(16px, 4vw, 48px);
     animation: fadeIn 0.3s ease;
 }
 
@@ -2230,17 +2230,16 @@ section:first-of-type {
 }
 
 .case-study-modal-content {
+    position: relative;
+    z-index: 1;
     background: var(--container-bg);
     border-radius: 16px;
     padding: 2.5rem;
-    max-width: 1400px;
-    width: min(96vw, 1400px);
-    max-height: calc(100vh - 48px);
+    width: min(92vw, 1200px);
+    max-height: min(90vh, 900px);
     margin: 0;
     overflow-x: hidden;
     overflow-y: auto;
-    position: relative;
-    z-index: 1;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     border: 1px solid var(--border);
     animation: slideUp 0.3s ease;
@@ -2333,11 +2332,11 @@ section:first-of-type {
     
     .case-study-modal-content {
         padding: 1.25rem;
-        width: 96vw;
+        width: min(92vw, 1200px);
     }
     
     .case-study-modal.show {
-        padding: 16px;
+        padding: clamp(12px, 3vw, 24px);
     }
     
     .case-study-title {
@@ -2371,7 +2370,11 @@ section:first-of-type {
     
     .case-study-modal-content {
         padding: 1.25rem;
-        width: 96vw;
+        width: min(92vw, 1200px);
+    }
+    
+    .case-study-modal.show {
+        padding: clamp(12px, 3vw, 24px);
     }
     
     .case-study-modal.show {
