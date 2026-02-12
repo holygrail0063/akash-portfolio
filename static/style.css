@@ -2209,7 +2209,7 @@ section:first-of-type {
     background: var(--container-bg);
     border-radius: 12px;
     padding: 2.5rem;
-    max-width: 800px;
+    max-width: 1200px;
     width: 90%;
     max-height: 90vh;
     overflow-y: auto;
