@@ -2192,7 +2192,7 @@ section:first-of-type {
     display: none;
     position: fixed;
     inset: 0;
-    z-index: 2000;
+    z-index: 9999;
 }
 
 .case-study-modal.show {
@@ -2212,11 +2212,11 @@ section:first-of-type {
 
 .case-study-modal-content {
     background: var(--container-bg);
-    border-radius: 12px;
+    border-radius: 16px;
     padding: 2.5rem;
     max-width: 1400px;
     width: min(96vw, 1400px);
-    max-height: min(90vh, 900px);
+    max-height: calc(100vh - 48px);
     margin: 0;
     overflow-x: hidden;
     overflow-y: auto;
