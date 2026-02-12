@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Akash Portfolio</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</head>
+<body>
+    <button class="theme-toggle" aria-label="Toggle dark mode">
+        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"/>
+        </svg>
+        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="display: none;">
+            <path d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"/>
+        </svg>
+    </button>
+    <div class="aurora-background">
+        <div class="aurora-overlay"></div>
+        <nav class="navbar closed">
+            <div class="mobile-nav-header">
+                <h1 class="mobile-title">Akash's Portfolio</h1>
+                <button class="menu-toggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <ul>
+                <li><a href="#about">About Me 🙋🏽</a></li>
+                <li><a href="#tools">Technical Skills 💻</a></li>
+                <li><a href="#projects">Project Highlights ⬇️</a></li>
+                <li><a href="#contact">Let's Talk 🗣️</a></li>
+                <li><a href="#" class="book-call" id="bookCallButton">Book a Call 📅</a></li>
+            </ul>
+        </nav>
+        
+        <section id="about" class="section">
+        <h1>About Me 🙋🏽</h1>
+        <div class="about-content">
+            <div class="speech-bubble">
+                <div class="typing-container">
+                    <span id="typing-text"></span>
+                    <span class="cursor">|</span>
+                </div>
+                <div class="bubble-content" id="bubble-content">
+                    <p>I'm a Business Analyst who focuses on understanding how systems, data, and operations connect to support better decision-making. I turn unclear requests into structured requirements and transform raw operational data into insights teams can act on.</p>
+
+                    <p>At Cash4You, I worked on POS system improvements, fraud prevention rule development, decision engine enhancements, and automated reporting dashboards that supported leadership visibility and operational accuracy. I regularly collaborate with developers, operations teams, and stakeholders to move ideas from problem definition to working solutions.</p>
+                    
+                    <p>I enjoy improving workflows, simplifying complex processes, and building solutions that are practical, reliable, and easy for teams to use every day.</p>
+                    
+                    <p class="location">📍 Toronto-based | 🏢 Hybrid or On-Site Ready | ✅ Stakeholder-approved</p>
+                </div>
+            </div>
+        </div>
+        <div class="section-connector">
+            <div id="sd-container">
+                <div class="arrow"></div>
+                <div class="arrow"></div>
+            </div>
+        </div>
+    </section>
+    <section id="tools" class="section">
+        <h1>Technical Skills 🖥️</h1>
+        <div class="tools-intro">
+            <p>These are my self-rated skill levels — based on how often, how confidently, and how creatively I've used each tool in real-world projects.</p>
+        </div>
+        <div class="skills-container">
+            <div class="skill-grid">
+                <div class="skill-item" data-rating="9">
+                    <span class="skill-name">SQL</span>
+                    <div class="skill-circle">
+                        <svg class="progress-ring" viewBox="0 0 120 120">
+                            <circle class="progress-ring-circle-bg" stroke="#e5e7eb" stroke-width="8" fill="transparent" r="51" cx="60" cy="60"/>
+                            <circle class="progress-ring-circle" stroke="url(#skillGradient)" stroke-width="8" fill="transparent" r="51" cx="60" cy="60"/>
+                        </svg>
+                        <div class="skill-content">
+                            <img src="https://cdn-icons-png.flaticon.com/512/4248/4248443.png" alt="SQL" class="skill-logo">
+                        </div>
+                    </div>
+                    <div class="skill-rating">9/10</div>
+
+                </div>
+
+                <div class="skill-item" data-rating="8.5">
+                    <span class="skill-name">Power BI</span>
+                    <div class="skill-circle">
+                        <svg class="progress-ring" viewBox="0 0 120 120">
+                            <circle class="progress-ring-circle-bg" stroke="#e5e7eb" stroke-width="8" fill="transparent" r="51" cx="60" cy="60"/>
+                            <circle class="progress-ring-circle" stroke="url(#skillGradient)" stroke-width="8" fill="transparent" r="51" cx="60" cy="60"/>
+                        </svg>
+                        <div class="skill-content">
+                            <img src="https://img.icons8.com/fluency/48/power-bi-2021.png" alt="Power BI" class="skill-logo">
+                        </div>
+                    </div>
+                    <div class="skill-rating">8.5/10</div>
+
+                </div>
+
+                <div class="skill-item" data-rating="7.5">
+                    <span class="skill-name">Python</span>
+                    <div class="skill-circle">
+                        <svg class="progress-ring" viewBox="0 0 120 120">
+                            <circle class="progress-ring-circle-bg" stroke="#e5e7eb" stroke-width="8" fill="transparent" r="51" cx="60" cy="60"/>
+                            <circle class="progress-ring-circle" stroke="url(#skillGradient)" stroke-width="8" fill="transparent" r="51" cx="60" cy="60"/>
+                        </svg>
+                        <div class="skill-content">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" class="skill-logo">
+                        </div>
+                    </div>
+                    <div class="skill-rating">7.5/10</div>
+
+                </div>
+
+                <div class="skill-item" data-rating="9">
+                    <span class="skill-name">Excel</span>
+                    <div class="skill-circle">
+                        <svg class="progress-ring" viewBox="0 0 120 120">
+                            <circle class="progress-ring-circle-bg" stroke="#e5e7eb" stroke-width="8" fill="transparent" r="51" cx="60" cy="60"/>
+                            <circle class="progress-ring-circle" stroke="url(#skillGradient)" stroke-width="8" fill="transparent" r="51" cx="60" cy="60"/>
+                        </svg>
+                        <div class="skill-content">
+                            <img src="https://cdn-icons-png.flaticon.com/512/732/732220.png" alt="Excel" class="skill-logo">
+                        </div>
+                    </div>
+                    <div class="skill-rating">9/10</div>
+
+                </div>
+
+                <div class="skill-item" data-rating="7">
+                    <span class="skill-name">PowerShell</span>
+                    <div class="skill-circle">
+                        <svg class="progress-ring" viewBox="0 0 120 120">
+                            <circle class="progress-ring-circle-bg" stroke="#e5e7eb" stroke-width="8" fill="transparent" r="51" cx="60" cy="60"/>
+                            <circle class="progress-ring-circle" stroke="url(#skillGradient)" stroke-width="8" fill="transparent" r="51" cx="60" cy="60"/>
+                        </svg>
+                        <div class="skill-content">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/powershell/powershell-original.svg" alt="PowerShell" class="skill-logo">
+                        </div>
+                    </div>
+                    <div class="skill-rating">7/10</div>
+
+                </div>
+
+                <div class="skill-item" data-rating="6.5">
+                    <span class="skill-name">HTML/CSS</span>
+                    <div class="skill-circle">
+                        <svg class="progress-ring" viewBox="0 0 120 120">
+                            <circle class="progress-ring-circle-bg" stroke="#e5e7eb" stroke-width="8" fill="transparent" r="51" cx="60" cy="60"/>
+                            <circle class="progress-ring-circle" stroke="url(#skillGradient)" stroke-width="8" fill="transparent" r="51" cx="60" cy="60"/>
+                        </svg>
+                        <div class="skill-content">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML/CSS" class="skill-logo">
+                        </div>
+                    </div>
+                    <div class="skill-rating">6.5/10</div>
+
+                </div>
+
+                <div class="skill-item" data-rating="8">
+                    <span class="skill-name">Jira</span>
+                    <div class="skill-circle">
+                        <svg class="progress-ring" viewBox="0 0 120 120">
+                            <circle class="progress-ring-circle-bg" stroke="#e5e7eb" stroke-width="8" fill="transparent" r="51" cx="60" cy="60"/>
+                            <circle class="progress-ring-circle" stroke="url(#skillGradient)" stroke-width="8" fill="transparent" r="51" cx="60" cy="60"/>
+                        </svg>
+                        <div class="skill-content">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg" alt="Jira" class="skill-logo">
+                        </div>
+                    </div>
+                    <div class="skill-rating">8/10</div>
+
+                </div>
+
+                <div class="skill-item" data-rating="8">
+                    <span class="skill-name">Confluence</span>
+                    <div class="skill-circle">
+                        <svg class="progress-ring" viewBox="0 0 120 120">
+                            <circle class="progress-ring-circle-bg" stroke="#e5e7eb" stroke-width="8" fill="transparent" r="51" cx="60" cy="60"/>
+                            <circle class="progress-ring-circle" stroke="url(#skillGradient)" stroke-width="8" fill="transparent" r="51" cx="60" cy="60"/>
+                        </svg>
+                        <div class="skill-content">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/confluence/confluence-original.svg" alt="Confluence" class="skill-logo">
+                        </div>
+                    </div>
+                    <div class="skill-rating">8/10</div>
+
+                </div>
+
+                <!-- New Tools Added -->
+                <div class="skill-item" data-rating="7.5">
+                    <span class="skill-name">REST API</span>
+                    <div class="skill-circle">
+                        <svg class="progress-ring" viewBox="0 0 120 120">
+                            <circle class="progress-ring-circle-bg" stroke="#e5e7eb" stroke-width="8" fill="transparent" r="51" cx="60" cy="60"/>
+                            <circle class="progress-ring-circle" stroke="url(#skillGradient)" stroke-width="8" fill="transparent" r="51" cx="60" cy="60"/>
+                        </svg>
+                        <div class="skill-content">
+                            <img src="https://cdn-icons-png.flaticon.com/512/2164/2164832.png" alt="REST API" class="skill-logo">
+                        </div>
+                    </div>
+                    <div class="skill-rating">7.5/10</div>
+
+                </div>
+
+                <div class="skill-item" data-rating="7">
+                    <span class="skill-name">Postman</span>
+                    <div class="skill-circle">
+                        <svg class="progress-ring" viewBox="0 0 120 120">
+                            <circle class="progress-ring-circle-bg" stroke="#e5e7eb" stroke-width="8" fill="transparent" r="51" cx="60" cy="60"/>
+                            <circle class="progress-ring-circle" stroke="url(#skillGradient)" stroke-width="8" fill="transparent" r="51" cx="60" cy="60"/>
+                        </svg>
+                        <div class="skill-content">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" alt="Postman" class="skill-logo">
+                        </div>
+                    </div>
+                    <div class="skill-rating">7/10</div>
+
+                </div>
+
+
+
+
+
+
+            </div>
+
+            <!-- Learning Now Section -->
+            <div class="learning-section">
+                <h3>Currently Learning</h3>
+                <div class="skill-grid learning-grid">
+                    <div class="skill-item learning" data-rating="5">
+                        <span class="skill-name">Tableau</span>
+                        <div class="skill-circle">
+                            <svg class="progress-ring" viewBox="0 0 120 120">
+                                <circle class="progress-ring-circle-bg" stroke="#e5e7eb" stroke-width="8" fill="transparent" r="51" cx="60" cy="60"/>
+                                <circle class="progress-ring-circle" stroke="url(#skillGradient)" stroke-width="8" fill="transparent" r="51" cx="60" cy="60"/>
+                            </svg>
+                            <div class="skill-content">
+                                <img src="https://img.icons8.com/color/48/tableau-software.png" alt="Tableau" class="skill-logo">
+                            </div>
+                        </div>
+                        <div class="skill-rating">5/10</div>
+
+                    </div>
+
+                    <div class="skill-item learning" data-rating="4">
+                        <span class="skill-name">R</span>
+                        <div class="skill-circle">
+                            <svg class="progress-ring" viewBox="0 0 120 120">
+                                <circle class="progress-ring-circle-bg" stroke="#e5e7eb" stroke-width="8" fill="transparent" r="51" cx="60" cy="60"/>
+                                <circle class="progress-ring-circle" stroke="url(#skillGradient)" stroke-width="8" fill="transparent" r="51" cx="60" cy="60"/>
+                            </svg>
+                            <div class="skill-content">
+                                <img src="https://img.icons8.com/fluency/48/r-project.png" alt="R" class="skill-logo">
+                            </div>
+                        </div>
+                        <div class="skill-rating">4/10</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SVG Gradients -->
+        <svg width="0" height="0">
+            <defs>
+                <linearGradient id="skillGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#00bcd4;stop-opacity:1" />
+                    <stop offset="50%" style="stop-color:#0097a7;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#00695c;stop-opacity:1" />
+                </linearGradient>
+            </defs>
+        </svg>
+        <div class="section-connector">
+            <div id="sd-container">
+                <div class="arrow"></div>
+                <div class="arrow"></div>
+            </div>
+        </div>
+    </section>
+    <section id="projects" class="section">
+        <h1>Project Highlights ⤵️</h1>
+        <div class="projects-prompt animated-prompt">I wear more than one hat — click each tab to see where I’ve added value.</div>
+        <div class="tab-container">
+            <div class="tab-buttons">
+                <button class="tab-button active" onclick="openTab('business')">Business & Data Analysis</button>
+                <button class="tab-button" onclick="openTab('risk')">Risk and Compliance</button>
+                <button class="tab-button" onclick="openTab('dev')">Development & Testing</button>
+            </div>
+            
+            <div class="tab-content-container">
+                <section id="business" class="tab-content active">
+                    <h2><img src="https://img.icons8.com/external-filled-outline-design-circle/64/external-Business-Analysis-digital-marketing-filled-outline-design-circle.png" alt="external-Business-Analysis-digital-marketing-filled-outline-design-circle"/> Business & Data Analysis</h2>
+
+                    <div class="project-item">
+                        <h3>✅ Platform Migration & Funding Method Transition (Interac → Direct Deposit)</h3>
+                        <ul>
+                            <li>Led the end-to-end migration of customers from Interac-based funding to a Direct Deposit cashless disbursement model. Coordinated with Store Ops, QA, Engineering, and Compliance to ensure accurate customer setup, verification, and zero-downtime rollout.</li>
+                            <li>➡️ Successfully migrated thousands of customer profiles with minimal disruption, improving settlement accuracy and reducing manual cash-handling issues.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-item">
+                        <h3>✅ Digital Disbursement Platform Enhancement & Customer Onboarding</h3>
+                        <ul>
+                            <li>Delivered requirements, user flows, and functional specs for cash management improvements across digital and in-store channels. Conducted extensive UAT on deposit workflows, routing logic, ACH/e-transfer integrations, and account-linking features.</li>
+                            <li>➡️ Supported onboarding for hundreds of end users, resolving migration issues quickly and achieving smooth adoption of new digital payment workflows.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-item">
+                        <h3>✅ Web Portal Enhancements – Payment Logic & Account Configuration</h3>
+                        <ul>
+                            <li>Streamlined loan repayment workflows and helped transition users to enhanced modules with updated interest-rate and payment logic. Ensured accurate configuration of banking profiles during migration and validated payment triggers end-to-end.</li>
+                            <li>➡️ Reduced setup errors across retail stores and improved overall payment flow reliability.</li>
+                        </ul>
+                    </div>
+                </section>
+                <section id="risk" class="tab-content">
+                    <h2><img src="https://img.icons8.com/external-parzival-1997-flat-parzival-1997/64/external-risk-trading-psychology-parzival-1997-flat-parzival-1997.png" alt="external-risk-trading-psychology-parzival-1997-flat-parzival-1997"/> Risk and Compliance</h2>
+                    
+                    <div class="project-item">
+                        <h3>✅ Fraud Rule Development – Preventive Risk Analytics</h3>
+                        <ul>
+                            <li>Analyzed teller transactions and behavioral data using SQL to identify suspicious activity across various fraud types (identity manipulation, collusion, repeated refunds, etc.). Partnered with stakeholders to write 15+ logic-driven fraud rules integrated into the POS and decision engine.</li>
+                            <li>➡️ Reduced fraudulent transaction volume by 25% and established early warning alerts for recurring high-risk behaviors.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-item">
+                        <h3>✅ Insider Risk Reporting – Leadership Dashboards</h3>
+                        <ul>
+                            <li>Built monthly dashboards in Power BI to monitor insider threat cases, policy violations, and code-of-conduct breaches. Pulled raw case data using SQL, defined KPIs (e.g., Avg Resolution Days, % On-Time Closures), and added commentary for executive presentations.</li>
+                            <li>➡️ Enabled faster response to open investigations and drove SOP changes in high-volume case types like Sales Practice and Conflict of Interest.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-item">
+                        <h3>✅ Flinks API Integration – Secondary Bank Verification</h3>
+                        <ul>
+                            <li>Evaluated and integrated Flinks as a secondary bank verification provider to reduce verification drop-offs. Conducted API validation using Postman, reviewed failed handoffs, and tested customer workflows across the core platform.</li>
+                            <li>➡️ Improved customer onboarding success rate by 18% and reduced manual escalation cases.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-item">
+                        <h3>✅ SOP & Escalation Insights – Targeted Process Improvements</h3>
+                        <ul>
+                            <li>Analyzed case resolution delays using historical data and KPI dashboards. Identified long bottlenecks in Sales Practice and Conflict of Interest cases, leading to SOP refinements and updated escalation training.</li>
+                            <li>➡️ Cut average case resolution time by 20+ days in key categories.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-item">
+                        <h3>🛠️ Tools & Tech: Power BI, SQL, Excel, Postman, Internal CRM Logs</h3>
+                    </div>
+                </section>
+                <section id="dev" class="tab-content">
+                    <h2><img src="https://img.icons8.com/ios-filled/50/code.png" alt="code"/> Development & Testing</h2>
+                    
+                    <div class="project-item">
+                        <h3>✅ QA Testing & Regression Management</h3>
+                        <ul>
+                            <li>Worked alongside QA engineers to plan and execute regression test cases for POS features, lending logic changes, and fraud rule deployments. Logged bugs in Jira, tracked release timelines, and created checklists to ensure consistent test coverage.</li>
+                            <li>➡️ Reduced release time for major POS updates by 30% and minimized post-production rollbacks.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-item">
+                        <h3>✅ UAT Ownership & Sprint Testing</h3>
+                        <ul>
+                            <li>Drafted acceptance criteria and user scenarios, participated in daily standups and retros, and drove UAT cycles in collaboration with stakeholders. Used Excel to monitor test pass rates and manage defect resolution priorities.</li>
+                            <li>➡️ Ensured smooth delivery across 15+ sprint releases with minimal blocker issues at launch.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-item">
+                        <h3>✅ API Testing (Flinks, Verification Services)</h3>
+                        <ul>
+                            <li>Executed test requests in Postman to verify third-party service endpoints, validate data payloads, and handle error scenarios. Documented test results and escalated inconsistencies to developers for patching.</li>
+                            <li>➡️ Enabled seamless integration of bank verification APIs with zero post-launch disruption.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-item">
+                        <h3>✅ Data Cleanup & Report Validation</h3>
+                        <ul>
+                            <li>Performed structured data audits using SQL to validate critical metrics powering fraud models and executive dashboards. Identified and corrected nulls, duplicates, and data mismatches before final deployment.</li>
+                            <li>➡️ Maintained data integrity across internal reporting pipelines and decision engines.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-item">
+                        <h3>🛠️ Tools & Tech: Jira, SQL, Excel, Postman, QA Scripts, UAT Playbooks</h3>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="section-connector">
+            <div id="sd-container">
+                <div class="arrow"></div>
+                <div class="arrow"></div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="section">
+        <h1>Let's Talk 📲</h1>
+        <div class="contact-intro">
+            <p>Impressed? Let's keep the conversation going.</p>
+        </div>
+        <form id="contact-form" class="contact-form" action="https://formspree.io/f/xkgblpqb" method="POST" style="opacity: 1; visibility: visible;">
+            <!-- Honeypot field for bot protection -->
+            <div class="honeypot-field" style="position: absolute; left: -9999px;">
+                <input type="text" name="bot-field" tabindex="-1" autocomplete="off">
+            </div>
+            
+            <!-- Add form identifier -->
+            <input type="hidden" name="form-name" value="contact-form">
+            
+            <div class="form-group">
+                <label for="name" class="contact-label"><span class="emoji">👤</span> Name</label>
+                <div class="input-wrapper">
+                    <input type="text" id="name" name="name" placeholder="Your name (optional)" autocomplete="name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email" class="contact-label"><span class="emoji">📧</span> Email <span class="required-star">*</span></label>
+                <div class="input-wrapper">
+                    <input type="email" id="email" name="email" placeholder="Your email address" required autocomplete="email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="message" class="contact-label"><span class="emoji">💬</span> Message <span class="required-star">*</span></label>
+                <div class="input-wrapper">
+                    <textarea id="message" name="message" placeholder="Let's chat roles, goals, and how I can help your team." required rows="3"></textarea>
+                </div>
+            </div>
+            
+            <!-- Custom Slider CAPTCHA -->
+            <div class="captcha-container">
+                <div class="captcha-slider">
+                    <div class="captcha-handle"></div>
+                </div>
+                <div class="captcha-text">Slide to verify you're human</div>
+            </div>
+            
+            <button type="submit" class="submit-btn" id="submit-btn">
+                <span class="btn-text">Let's Connect 💬</span>
+                <span class="btn-loading" style="display: none;">
+                    <span class="spinner"></span>
+                    Sending...
+                </span>
+            </button>
+        </form>
+        
+        <div id="form-message" class="form-message"></div>
+    </section>
+    
+    <!-- Visit Counter Widget -->
+    <div class="visit-counter-widget">
+        <div class="counter-circle">
+            <span class="counter-icon">👥</span>
+            <span class="counter-number">{{ visit_count }}</span>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="meteor-container">
+            <!-- Left side meteors -->
+            <div class="meteor" style="left: 5%; top: 10%; animation-delay: 0s;"></div>
+            <div class="meteor" style="left: 15%; top: 30%; animation-delay: 2.5s;"></div>
+            <div class="meteor" style="left: 25%; top: 50%; animation-delay: 5s;"></div>
+            <div class="meteor" style="left: 35%; top: 70%; animation-delay: 1.5s;"></div>
+            
+            <!-- Center meteors -->
+            <div class="meteor" style="left: 45%; top: 20%; animation-delay: 3.5s;"></div>
+            <div class="meteor" style="left: 55%; top: 40%; animation-delay: 0.5s;"></div>
+            <div class="meteor" style="left: 65%; top: 60%; animation-delay: 4s;"></div>
+            
+            <!-- Right side meteors -->
+            <div class="meteor" style="left: 75%; top: 15%; animation-delay: 2s;"></div>
+            <div class="meteor" style="left: 85%; top: 35%; animation-delay: 4.5s;"></div>
+            <div class="meteor" style="left: 95%; top: 55%; animation-delay: 1s;"></div>
+        </div>
+        <div class="footer-content">
+            <!-- Signature -->
+            <div class="footer-signature">
+                🛠️ Made with curiosity & caffeine by Akash Kamble.
+            </div>
+
+            <!-- Social Links -->
+            <div class="footer-social">
+                <a href="mailto:Hello@AkashKamble.ca" class="footer-link" title="Email">
+                    <span class="footer-icon">📧</span>
+                </a>
+                <a href="https://www.linkedin.com/in/aka7t/" class="footer-link" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+                    <img src="https://img.icons8.com/fluency/48/linkedin.png" alt="linkedin" class="footer-icon-img"/>
+                </a>
+                <a href="https://github.com/holygrail0063" class="footer-link" title="GitHub" target="_blank" rel="noopener noreferrer">
+                    <img src="https://img.icons8.com/ios-glyphs/30/github.png" alt="github" class="footer-icon-img"/>
+                </a>
+            </div>
+
+            <!-- CTA Button -->
+            <a href="#" class="footer-cta" id="hireButton">
+                👋 Want to hire me?
+            </a>
+
+            <!-- Location -->
+            <div class="footer-location">
+                📍 Toronto-based | Open to hybrid and on-site roles
+            </div>
+        </div>
+    </footer>
+
+    <!-- Hire Me Modal -->
+    <div id="hireModal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close">❌</button>
+            <h2>Schedule a Meeting</h2>
+            <form id="hireForm" action="https://formspree.io/f/mwpqeryv" method="POST">
+                <!-- Add form identifier and recipient email -->
+                <input type="hidden" name="form-name" value="hire-form">
+                <input type="hidden" name="_replyto" value="akashkamble0063@gmail.com">
+                <input type="hidden" name="_subject" value="New Meeting Request">
+                
+                <div class="form-group">
+                    <label for="hireName">Name <span class="required">*</span></label>
+                    <input type="text" id="hireName" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="hireEmail">Email <span class="required">*</span></label>
+                    <input type="email" id="hireEmail" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="jobLink">Job Posting Link <span class="required">*</span></label>
+                    <input type="url" id="jobLink" name="jobLink" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="about">About the Job</label>
+                    <textarea id="about" name="about" rows="3" style="vertical-align: top; padding-top: 0.6rem;"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <div class="date-label-group">
+                        <label for="date">Select Date <span class="required">*</span></label>
+                        <button type="button" class="clear-date-btn" aria-label="Clear selected date">Clear</button>
+                    </div>
+                    <input type="hidden" id="date" name="date" required>
+                    <div class="date-picker-container">
+                        <div class="date-picker-trigger">
+                            <span class="selected-date-text">Select a date</span>
+                            <button type="button" class="calendar-toggle" aria-label="Toggle calendar">📅</button>
+                        </div>
+                        <div class="date-picker" style="display: none;">
+                            <div class="date-picker-header">
+                                <button type="button" class="nav-button prev-month">&lt;</button>
+                                <span class="month-year">July 2025</span>
+                                <button type="button" class="nav-button next-month">&gt;</button>
+                            </div>
+                            <div class="weekdays">
+                                <span class="weekday">SUN</span>
+                                <span class="weekday">MON</span>
+                                <span class="weekday">TUE</span>
+                                <span class="weekday">WED</span>
+                                <span class="weekday">THU</span>
+                                <span class="weekday">FRI</span>
+                                <span class="weekday">SAT</span>
+                            </div>
+                            <div class="dates">
+                                <!-- Dates will be populated by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="time">Preferred Time (EST) <span class="required">*</span></label>
+                    <select id="time" name="time" required>
+                        <!-- Time slots will be populated by JavaScript -->
+                    </select>
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    <span class="btn-text">Schedule Meeting</span>
+                    <span class="btn-loading" style="display: none;">
+                        <span class="spinner"></span>
+                        Sending...
+                    </span>
+                </button>
+            </form>
+            <div id="formSuccess" class="form-success" style="display: none;">
+                ✅ Thanks! I'll follow up shortly.
+            </div>
+            <div id="formError" class="form-error" style="display: none;">
+                ❌ Oops! Something went wrong. Please try again.
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function openTab(tabName) {
+            // Hide all tab contents
+            var tabContents = document.getElementsByClassName('tab-content');
+            for (var i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove('active');
+            }
+            
+            // Remove active class from all tab buttons
+            var tabButtons = document.getElementsByClassName('tab-button');
+            for (var i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove('active');
+            }
+            
+            // Show the selected tab content
+            document.getElementById(tabName).classList.add('active');
+            
+            // Add active class to the clicked button
+            event.target.classList.add('active');
+        }
+
+        // Animate skill progress rings
+        function animateSkills() {
+            const skillItems = document.querySelectorAll('.skill-item');
+            
+            skillItems.forEach(item => {
+                const rating = parseFloat(item.getAttribute('data-rating'));
+                const circle = item.querySelector('.progress-ring-circle');
+                
+                // Get the radius from the circle element
+                const radius = parseFloat(circle.getAttribute('r'));
+                const circumference = 2 * Math.PI * radius;
+                
+                // First set the stroke-dasharray to define the length of the stroke
+                circle.style.strokeDasharray = circumference;
+                
+                // Initially set to full circumference to make it empty
+                circle.style.strokeDashoffset = circumference;
+                
+                // Force a reflow to ensure the initial state is rendered
+                circle.getBoundingClientRect();
+                
+                // Calculate the final offset based on rating (10 is max rating)
+                const finalOffset = circumference * (1 - rating / 10);
+                
+                // Add the animation class and set the final offset
+                requestAnimationFrame(() => {
+                    circle.style.strokeDashoffset = finalOffset;
+                });
+            });
+        }
+
+        // Intersection Observer to trigger animation when section is visible
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateSkills();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        // Observe the tools section
+        document.addEventListener('DOMContentLoaded', () => {
+            const toolsSection = document.getElementById('tools');
+            if (toolsSection) {
+                observer.observe(toolsSection);
+                
+                // Also trigger animation if section is already visible
+                if (isElementInViewport(toolsSection)) {
+                    animateSkills();
+                }
+            }
+        });
+
+        // Helper function to check if element is in viewport
+        function isElementInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        // Typing animation for About Me section
+        function typeWriter(element, text, speed = 100) {
+            let i = 0;
+            element.innerHTML = '';
+            
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
+
+        // Smooth scrolling for navbar links
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get all navbar links
+            const navLinks = document.querySelectorAll('.navbar a[href^="#"]');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    
+                    if (targetSection) {
+                        // Calculate offset for fixed navbar (adjust as needed)
+                        const navbarHeight = 80; // Approximate navbar height
+                        const targetPosition = targetSection.offsetTop - navbarHeight;
+                        
+                        // Smooth scroll to target
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            const typingElement = document.getElementById('typing-text');
+            if (typingElement) {
+                setTimeout(() => {
+                    typeWriter(typingElement, "Hi, I'm Akash.", 120);
+                }, 500);
+            }
+
+            // CAPTCHA Slider functionality
+            const captchaSlider = document.querySelector('.captcha-slider');
+            const captchaHandle = document.querySelector('.captcha-handle');
+            const captchaContainer = document.querySelector('.captcha-container');
+            const captchaText = document.querySelector('.captcha-text');
+            const emailInput = document.getElementById('email');
+            const messageInput = document.getElementById('message');
+            let isCaptchaVerified = false;
+            let isDragging = false;
+            let startX;
+            let sliderLeft;
+            let isSliderEnabled = false;
+
+            // Function to check if mandatory fields are filled
+            function checkMandatoryFields() {
+                const isEmailFilled = emailInput.value.trim() !== '';
+                const isMessageFilled = messageInput.value.trim() !== '';
+                isSliderEnabled = isEmailFilled && isMessageFilled;
+                
+                if (isSliderEnabled) {
+                    captchaContainer.classList.remove('disabled');
+                    captchaText.textContent = 'Slide to verify you\'re human';
+                } else {
+                    captchaContainer.classList.add('disabled');
+                    captchaText.textContent = 'Fill required fields first';
+                }
+            }
+
+            // Add input event listeners to mandatory fields
+            emailInput.addEventListener('input', checkMandatoryFields);
+            messageInput.addEventListener('input', checkMandatoryFields);
+
+            // Initial check
+            checkMandatoryFields();
+
+            captchaHandle.addEventListener('mousedown', startDragging);
+            captchaHandle.addEventListener('touchstart', startDragging);
+            document.addEventListener('mousemove', drag);
+            document.addEventListener('touchmove', drag);
+            document.addEventListener('mouseup', stopDragging);
+            document.addEventListener('touchend', stopDragging);
+
+            function startDragging(e) {
+                if (!isSliderEnabled) return;
+                isDragging = true;
+                startX = e.type === 'mousedown' ? e.pageX : e.touches[0].pageX;
+                sliderLeft = captchaHandle.offsetLeft;
+                captchaSlider.classList.add('dragging');
+            }
+
+            function drag(e) {
+                if (!isDragging || !isSliderEnabled) return;
+                e.preventDefault();
+                
+                const x = e.type === 'mousemove' ? e.pageX : e.touches[0].pageX;
+                const walk = startX - x; // Changed from x - startX to startX - x for reverse direction
+                const sliderWidth = captchaSlider.offsetWidth;
+                const handleWidth = captchaHandle.offsetWidth;
+                
+                // Calculate position from right side
+                const rightPosition = sliderWidth - (handleWidth + sliderLeft);
+                const newRightPosition = Math.max(0, Math.min(rightPosition + walk, sliderWidth - handleWidth));
+                
+                // Set position from right
+                captchaHandle.style.right = `${newRightPosition}px`;
+                captchaHandle.style.left = 'auto'; // Ensure left is not set
+                
+                // Check if slider is at the start (left side)
+                if (newRightPosition >= sliderWidth - handleWidth - 5) {
+                    verifyCaptcha();
+                }
+            }
+
+            function stopDragging() {
+                if (!isDragging) return;
+                isDragging = false;
+                
+                if (!isCaptchaVerified) {
+                    // Reset handle position to right
+                    captchaHandle.style.right = '0px';
+                    captchaHandle.style.left = 'auto';
+                    captchaSlider.classList.remove('dragging');
+                }
+            }
+
+            function verifyCaptcha() {
+                isCaptchaVerified = true;
+                isDragging = false;
+                captchaContainer.classList.add('verified');
+                
+                // Wait for the arrow to fade out before showing checkmark
+                setTimeout(() => {
+                    captchaHandle.innerHTML = '<span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">✅</span>';
+                }, 300); // Match the CSS transition time
+                
+                captchaText.textContent = 'Verified!';
+                captchaSlider.classList.remove('dragging');
+            }
+
+            function resetCaptcha() {
+                isCaptchaVerified = false;
+                captchaContainer.classList.remove('verified');
+                captchaHandle.textContent = '';  // Clear any content (checkmark)
+                captchaHandle.style.right = '0px';
+                captchaHandle.style.left = 'auto';
+                captchaText.textContent = 'Slide to verify you\'re human';
+                captchaSlider.classList.remove('dragging');
+            }
+
+            // Contact form handling
+            const contactForm = document.getElementById('contact-form');
+            const submitBtn = document.getElementById('submit-btn');
+            const formMessage = document.getElementById('form-message');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Get form data
+                    const formData = new FormData(this);
+                    const name = formData.get('name');
+                    const email = formData.get('email');
+                    const message = formData.get('message');
+                    const botField = formData.get('bot-field');
+                    
+                    // Honeypot validation
+                    if (botField) {
+                        console.log('Bot detected');
+                        return;
+                    }
+                    
+                    // Basic validation
+                    if (!email || !message) {
+                        showMessage('Please fill in all required fields (email and message).', 'error');
+                        return;
+                    }
+                    
+                    if (!isValidEmail(email)) {
+                        showMessage('Please enter a valid email address.', 'error');
+                        return;
+                    }
+                    
+                    // Check CAPTCHA verification
+                    if (!isCaptchaVerified) {
+                        showMessage('Please complete the security verification.', 'error');
+                        return;
+                    }
+                    
+                    // Show loading state
+                    const btnText = submitBtn.querySelector('.btn-text');
+                    const btnLoading = submitBtn.querySelector('.btn-loading');
+                    btnText.style.display = 'none';
+                    btnLoading.style.display = 'inline-flex';
+                    submitBtn.disabled = true;
+                    
+                    // Add CAPTCHA verification to form data
+                    formData.append('captcha-verified', isCaptchaVerified);
+                    
+                    // Submit to Formspree
+                    fetch(this.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.ok) {
+                            showMessage('Thanks for connecting! Your message has been sent. I\'ll get back to you soon!', 'success');
+                            contactForm.reset();
+                            resetCaptcha(); // Use the new reset function
+                        } else {
+                            showMessage('Sorry, there was an error sending your message. Please try again.', 'error');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        showMessage('Sorry, there was an error sending your message. Please try again.', 'error');
+                    })
+                    .finally(() => {
+                        // Reset button state
+                        btnText.style.display = 'inline';
+                        btnLoading.style.display = 'none';
+                        submitBtn.disabled = false;
+                    });
+                });
+            }
+            
+            function showMessage(message, type) {
+                formMessage.textContent = message;
+                formMessage.className = `form-message ${type}`;
+                formMessage.style.display = 'block';
+                
+                // Scroll to message
+                formMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                
+                setTimeout(() => {
+                    formMessage.style.display = 'none';
+                }, 5000);
+            }
+            
+            function isValidEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+        });
+
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navbar = document.querySelector('.navbar');
+            const navLinks = document.querySelectorAll('.navbar a');
+
+            menuToggle.addEventListener('click', function() {
+                navbar.classList.toggle('closed');
+            });
+
+            // Close menu when a link is clicked
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    navbar.classList.add('closed');
+                });
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                const isClickInside = navbar.contains(event.target) || menuToggle.contains(event.target);
+                if (!isClickInside && !navbar.classList.contains('closed')) {
+                    navbar.classList.add('closed');
+                }
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Existing menu toggle code
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navbar = document.querySelector('.navbar');
+            
+            menuToggle.addEventListener('click', () => {
+                navbar.classList.toggle('closed');
+                menuToggle.classList.toggle('active');
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!navbar.contains(e.target) && !menuToggle.contains(e.target)) {
+                    navbar.classList.add('closed');
+                    menuToggle.classList.remove('active');
+                }
+            });
+
+            // Auto-scroll to About Me section on page load/refresh
+            const aboutSection = document.getElementById('about');
+            if (aboutSection) {
+                // Small delay to ensure smooth scroll after page load
+                setTimeout(() => {
+                    aboutSection.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+            }
+
+            // Close mobile menu when a link is clicked
+            document.querySelectorAll('.navbar a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navbar.classList.add('closed');
+                    menuToggle.classList.remove('active');
+                });
+            });
+        });
+
+        // Theme switching functionality
+        const themeToggle = document.querySelector('.theme-toggle');
+        const sunIcon = document.querySelector('.sun-icon');
+        const moonIcon = document.querySelector('.moon-icon');
+
+        // Check for saved theme preference, otherwise default to dark
+        const getPreferredTheme = () => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                return savedTheme;
+            }
+            return 'dark'; // Default to dark theme
+        };
+
+        // Apply theme to document
+        const setTheme = (theme) => {
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            
+            // Update icons
+            if (theme === 'dark') {
+                sunIcon.style.display = 'none';
+                moonIcon.style.display = 'block';
+            } else {
+                sunIcon.style.display = 'block';
+                moonIcon.style.display = 'none';
+            }
+        };
+
+        // Initial theme setup
+        setTheme(getPreferredTheme());
+
+        // Theme toggle click handler
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+        });
+
+        // Listen for system theme changes
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+            if (!localStorage.getItem('theme')) {
+                setTheme(e.matches ? 'dark' : 'light');
+            }
+        });
+
+        // Navigation highlighting based on scroll position
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.navbar a[href^="#"]');
+
+        function highlightNav() {
+            let current = '';
+            const scrollY = window.pageYOffset;
+            const windowHeight = window.innerHeight;
+            const navbarHeight = 80; // Account for navbar height
+
+            // Find which section is currently most visible
+            let maxVisibility = 0;
+            
+            sections.forEach(section => {
+                const sectionHeight = section.offsetHeight;
+                const sectionTop = section.offsetTop - navbarHeight;
+                const sectionBottom = sectionTop + sectionHeight;
+                const sectionId = section.getAttribute('id');
+
+                // Calculate how much of the section is visible
+                const viewportTop = scrollY;
+                const viewportBottom = scrollY + windowHeight;
+                
+                const visibleTop = Math.max(sectionTop, viewportTop);
+                const visibleBottom = Math.min(sectionBottom, viewportBottom);
+                const visibleHeight = Math.max(0, visibleBottom - visibleTop);
+                const visibilityRatio = visibleHeight / Math.min(sectionHeight, windowHeight);
+
+                // If this section has more visibility than previous ones, select it
+                if (visibilityRatio > maxVisibility && visibilityRatio > 0.3) {
+                    maxVisibility = visibilityRatio;
+                    current = sectionId;
+                }
+            });
+
+            // Clear all active states first
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+
+            // Add active class to the most visible section
+            if (current) {
+                navLinks.forEach(link => {
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        }
+
+        // Add scroll event listener
+        window.addEventListener('scroll', highlightNav);
+        
+        // Highlight on page load
+        document.addEventListener('DOMContentLoaded', highlightNav);
+
+        // Hire Modal Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('hireModal');
+            const modalContent = modal.querySelector('.modal-content');
+            const openButton = document.getElementById('hireButton');
+            const closeButton = modal.querySelector('.modal-close');
+            const form = document.getElementById('hireForm');
+            const dateInput = document.getElementById('date');
+            const timeSelect = document.getElementById('time');
+            const formSuccess = document.getElementById('formSuccess');
+            const formError = document.getElementById('formError');
+
+            // Populate time slots
+            function populateTimeSlots() {
+                const times = [];
+                for (let hour = 9; hour <= 18; hour++) {
+                    for (let minute of ['00', '30']) {
+                        if (hour === 18 && minute === '30') continue; // Skip 6:30 PM
+                        const period = hour >= 12 ? 'PM' : 'AM';
+                        const displayHour = hour > 12 ? hour - 12 : hour;
+                        times.push(`${displayHour}:${minute} ${period}`);
+                    }
+                }
+                
+                timeSelect.innerHTML = '<option value="">Select a time</option>' +
+                    times.map(time => `<option value="${time}">${time} EST</option>`).join('');
+            }
+
+            // Set date input constraints
+            function setDateConstraints() {
+                const today = new Date();
+                const yyyy = today.getFullYear();
+                const mm = String(today.getMonth() + 1).padStart(2, '0');
+                const dd = String(today.getDate()).padStart(2, '0');
+                
+                dateInput.min = `${yyyy}-${mm}-${dd}`;
+                dateInput.max = `${yyyy + 1}-${mm}-${dd}`;
+            }
+
+            // Validate weekday selection
+            dateInput.addEventListener('change', function() {
+                const selected = new Date(this.value);
+                if (selected.getDay() === 0 || selected.getDay() === 6) {
+                    alert('Please select a weekday (Monday-Friday)');
+                    this.value = '';
+                }
+            });
+
+            // Open modal
+            function openModal(e) {
+                e.preventDefault();
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+                form.style.display = 'block';
+                formSuccess.style.display = 'none';
+                formError.style.display = 'none';
+            }
+
+            // Close modal
+            function closeModal() {
+                modal.classList.remove('show');
+                document.body.style.overflow = '';
+                form.reset();
+                formSuccess.style.display = 'none';
+                formError.style.display = 'none';
+            }
+
+            // Handle form submission
+            function handleSubmit(e) {
+                e.preventDefault();
+                
+                // Basic validation
+                const name = form.querySelector('#hireName').value.trim();
+                const email = form.querySelector('#hireEmail').value.trim();
+                const jobLink = form.querySelector('#jobLink').value.trim();
+                const date = form.querySelector('#date').value.trim();
+                const time = form.querySelector('#time').value.trim();
+
+                if (!name || !email || !jobLink || !date || !time) {
+                    formError.textContent = 'Please fill in all required fields.';
+                    formError.style.display = 'block';
+                    return;
+                }
+
+                const formData = new FormData(form);
+                // Add formatted date and time to email
+                formData.append('Meeting Date', date);
+                formData.append('Meeting Time', time + ' EST');
+                
+                const submitBtn = form.querySelector('.submit-btn');
+                const btnText = submitBtn.querySelector('.btn-text');
+                const btnLoading = submitBtn.querySelector('.btn-loading');
+
+                // Show loading state
+                btnText.style.display = 'none';
+                btnLoading.style.display = 'inline-flex';
+                submitBtn.disabled = true;
+                formSuccess.style.display = 'none';
+                formError.style.display = 'none';
+
+                fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.ok) {
+                        form.style.display = 'none';
+                        formSuccess.style.display = 'block';
+                        formError.style.display = 'none';
+                        setTimeout(closeModal, 3000);
+                    } else {
+                        throw new Error('Form submission failed');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    formSuccess.style.display = 'none';
+                    formError.style.display = 'block';
+                    formError.textContent = 'Sorry, there was an error submitting the form. Please try again.';
+                })
+                .finally(() => {
+                    // Reset button state
+                    btnText.style.display = 'inline';
+                    btnLoading.style.display = 'none';
+                    submitBtn.disabled = false;
+                });
+            }
+
+            // Event listeners
+            openButton.addEventListener('click', openModal);
+            document.getElementById('bookCallButton').addEventListener('click', openModal);
+            closeButton.addEventListener('click', closeModal);
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal || e.target.classList.contains('modal-overlay')) {
+                    closeModal();
+                }
+            });
+            form.addEventListener('submit', handleSubmit);
+
+            // Prevent modal from closing when clicking inside content
+            modalContent.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+
+            // Initialize
+            populateTimeSlots();
+            setDateConstraints();
+        });
+
+        // Book Call Button Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const bookCallButton = document.getElementById('bookCallButton');
+            const modal = document.getElementById('hireModal');
+            const modalContent = modal.querySelector('.modal-content');
+            const closeButton = modal.querySelector('.modal-close');
+            const form = document.getElementById('hireForm');
+            const formSuccess = document.getElementById('formSuccess');
+
+            // Open modal when Book Call button is clicked
+            bookCallButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            });
+
+            // Close modal when clicking outside or on close button
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal || e.target.classList.contains('modal-overlay')) {
+                    modal.classList.remove('show');
+                    document.body.style.overflow = '';
+                }
+            });
+
+            closeButton.addEventListener('click', function() {
+                modal.classList.remove('show');
+                document.body.style.overflow = '';
+            });
+
+            // Prevent modal from closing when clicking inside content
+            modalContent.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+        });
+
+        // Date Picker functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const datePickerContainer = document.querySelector('.date-picker-container');
+            const datePickerTrigger = document.querySelector('.date-picker-trigger');
+            const datePicker = document.querySelector('.date-picker');
+            const monthYearDisplay = datePicker.querySelector('.month-year');
+            const datesContainer = datePicker.querySelector('.dates');
+            const prevMonthBtn = datePicker.querySelector('.prev-month');
+            const nextMonthBtn = datePicker.querySelector('.next-month');
+            const dateInput = document.getElementById('date');
+            const clearDateBtn = document.querySelector('.clear-date-btn');
+            const calendarToggleBtn = document.querySelector('.calendar-toggle');
+            const selectedDateText = document.querySelector('.selected-date-text');
+            
+            let currentDate = new Date();
+            let selectedDate = null;
+            let isPickerOpen = false;
+
+            function updateCalendar() {
+                const year = currentDate.getFullYear();
+                const month = currentDate.getMonth();
+                
+                // Update month and year display
+                const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 
+                                  'July', 'August', 'September', 'October', 'November', 'December'];
+                monthYearDisplay.textContent = `${monthNames[month]} ${year}`;
+                
+                // Clear previous dates
+                datesContainer.innerHTML = '';
+                
+                // Get first day of month and total days
+                const firstDay = new Date(year, month, 1).getDay();
+                const totalDays = new Date(year, month + 1, 0).getDate();
+                
+                // Add empty cells for days before first day of month
+                for (let i = 0; i < firstDay; i++) {
+                    const emptyCell = document.createElement('div');
+                    emptyCell.className = 'date';
+                    datesContainer.appendChild(emptyCell);
+                }
+                
+                // Add days of month
+                for (let day = 1; day <= totalDays; day++) {
+                    const dateCell = document.createElement('div');
+                    dateCell.className = 'date';
+                    dateCell.textContent = day;
+                    
+                    const dateObj = new Date(year, month, day);
+                    const isWeekend = dateObj.getDay() === 0 || dateObj.getDay() === 6;
+                    const isPast = dateObj < new Date().setHours(0,0,0,0);
+                    const isSelected = selectedDate && 
+                                     dateObj.getDate() === selectedDate.getDate() &&
+                                     dateObj.getMonth() === selectedDate.getMonth() &&
+                                     dateObj.getFullYear() === selectedDate.getFullYear();
+                    
+                    if (isWeekend) {
+                        dateCell.classList.add('weekend');
+                    }
+                    if (isPast) {
+                        dateCell.classList.add('disabled');
+                    }
+                    if (isSelected) {
+                        dateCell.classList.add('selected');
+                    }
+                    
+                    if (!isWeekend && !isPast) {
+                        dateCell.addEventListener('click', () => {
+                            if (selectedDate) {
+                                document.querySelector('.date.selected')?.classList.remove('selected');
+                            }
+                            dateCell.classList.add('selected');
+                            selectedDate = dateObj;
+                            dateInput.value = dateObj.toISOString().split('T')[0];
+                            selectedDateText.textContent = `${monthNames[month]} ${day}, ${year}`;
+                            togglePicker(); // Auto-collapse after selection
+                        });
+                    }
+                    
+                    datesContainer.appendChild(dateCell);
+                }
+            }
+
+            function togglePicker() {
+                isPickerOpen = !isPickerOpen;
+                datePicker.style.display = isPickerOpen ? 'block' : 'none';
+                datePickerContainer.classList.toggle('open');
+                datePickerTrigger.classList.toggle('active');
+                if (isPickerOpen) {
+                    updateCalendar();
+                }
+            }
+
+            function clearSelectedDate() {
+                selectedDate = null;
+                dateInput.value = '';
+                selectedDateText.textContent = 'Select a date';
+                document.querySelector('.date.selected')?.classList.remove('selected');
+            }
+
+            // Event listeners for month navigation
+            prevMonthBtn.addEventListener('click', () => {
+                currentDate.setMonth(currentDate.getMonth() - 1);
+                updateCalendar();
+            });
+            
+            nextMonthBtn.addEventListener('click', () => {
+                currentDate.setMonth(currentDate.getMonth() + 1);
+                updateCalendar();
+            });
+
+            // Event listeners for calendar toggle
+            calendarToggleBtn.addEventListener('click', function(event) {
+                event.stopPropagation(); // Prevent event bubbling
+                togglePicker();
+            });
+            
+            // Make entire date picker trigger clickable
+            datePickerTrigger.addEventListener('click', function(event) {
+                // Don't open if clicking the clear button or calendar toggle button
+                if (!event.target.classList.contains('clear-date-btn') && 
+                    !event.target.classList.contains('calendar-toggle')) {
+                    togglePicker();
+                }
+            });
+
+            // Event listeners for clear date button
+            clearDateBtn.addEventListener('click', clearSelectedDate);
+
+            // Close picker when clicking outside
+            document.addEventListener('click', function(event) {
+                if (isPickerOpen && datePicker.contains(event.target) && !datePickerTrigger.contains(event.target)) {
+                    togglePicker();
+                }
+            });
+
+            // Initialize calendar
+            updateCalendar();
+        });
+        
+        // Initialize calendar when modal opens
+        document.getElementById('hireButton').addEventListener('click', () => {
+            setTimeout(initializeCalendar, 100); // Small delay to ensure modal is rendered
+        });
+        
+        document.getElementById('bookCallButton').addEventListener('click', () => {
+            setTimeout(initializeCalendar, 100); // Small delay to ensure modal is rendered
+        });
+    </script>
+    <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top">⬆️</button>
+    <script>
+        // Scroll to top functionality
+        const scrollToTopButton = document.getElementById('scroll-to-top');
+        
+        // Show button when user scrolls down 300px from the top
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopButton.classList.add('show');
+            } else {
+                scrollToTopButton.classList.remove('show');
+            }
+        });
+        
+        // Smooth scroll to top when button is clicked
+        scrollToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html> 
