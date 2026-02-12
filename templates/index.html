@@ -1537,12 +1537,16 @@
                             title: 'Leadership Dashboards',
                             description: 'Built monthly Power BI dashboards to monitor insider threat cases, policy violations, and code-of-conduct breaches. Defined KPIs (Avg Resolution Days, % On-Time Closures) and added commentary for executive presentations.',
                             tools: ['Power BI', 'SQL', 'Excel'],
-                            outcome: 'Enabled faster response to open investigations and drove SOP changes in high-volume case types'
+                            techniques: ['KPI definition', 'data modeling', 'dashboard design', 'trend analysis'],
+                            methodology: 'iterative reporting cycles, stakeholder review, requirements validation',
+                            outcome: 'Enabled faster investigation response and informed SOP updates'
                         },
                         {
                             title: 'SOP & Escalation Insights',
                             description: 'Analyzed case resolution delays using historical data and KPI dashboards. Identified bottlenecks in Sales Practice and Conflict of Interest cases, leading to SOP refinements.',
                             tools: ['Power BI', 'SQL', 'Excel'],
+                            techniques: ['root-cause analysis', 'workflow analysis', 'KPI monitoring'],
+                            methodology: 'data-driven process improvement, stakeholder collaboration',
                             outcome: 'Cut average case resolution time by 20+ days in key categories'
                         }
                     ]
@@ -1556,13 +1560,17 @@
                             title: 'Flinks API Integration',
                             description: 'Evaluated and integrated Flinks as secondary bank verification provider. Conducted API validation using Postman, reviewed failed handoffs, and tested customer workflows.',
                             tools: ['Postman', 'SQL', 'Jira'],
-                            outcome: 'Improved customer onboarding success rate by 18% and reduced manual escalation cases'
+                            techniques: ['API validation', 'error-scenario testing', 'workflow testing'],
+                            methodology: 'vendor evaluation, QA validation cycles, Agile delivery',
+                            outcome: 'Improved onboarding success rate by 18% and reduced escalations'
                         },
                         {
                             title: 'Multi-Provider Verification',
                             description: 'Implemented failover logic for Persona, Mitek, and CreditSense verification services. Designed error handling and retry mechanisms for improved reliability.',
                             tools: ['Postman', 'SQL', 'Jira', 'Confluence'],
-                            outcome: 'Reduced verification drop-offs and improved system reliability'
+                            techniques: ['failover design', 'exception handling', 'integration testing'],
+                            methodology: 'SDLC integration testing, cross-functional delivery',
+                            outcome: 'Reduced verification drop-offs and improved reliability'
                         }
                     ]
                 },
@@ -1575,19 +1583,25 @@
                             title: 'Regression Testing & Release Management',
                             description: 'Planned and executed regression test cases for POS features, lending logic changes, and fraud rule deployments. Logged bugs in Jira and tracked release timelines.',
                             tools: ['Jira', 'Excel', 'SQL'],
-                            outcome: 'Reduced release time for major POS updates by 30% and minimized post-production rollbacks'
+                            techniques: ['regression testing', 'defect tracking', 'test-case design'],
+                            methodology: 'Agile sprint releases, QA coordination',
+                            outcome: 'Reduced release time by 30% and minimized post-production rollbacks'
                         },
                         {
                             title: 'UAT & Sprint Testing',
                             description: 'Drafted acceptance criteria and user scenarios. Participated in daily standups and retros. Drove UAT cycles in collaboration with stakeholders. Monitored test pass rates and managed defect resolution priorities.',
                             tools: ['Jira', 'Excel', 'Confluence'],
-                            outcome: 'Ensured smooth delivery across 15+ sprint releases with minimal blocker issues at launch'
+                            techniques: ['acceptance testing', 'scenario validation', 'release readiness tracking'],
+                            methodology: 'Agile Scrum, UAT coordination',
+                            outcome: 'Ensured smooth delivery across 15+ sprint releases'
                         },
                         {
                             title: 'Data Validation & Quality',
                             description: 'Performed structured data audits using SQL to validate critical metrics powering fraud models and executive dashboards. Identified and corrected data quality issues before deployment.',
                             tools: ['SQL', 'Excel'],
-                            outcome: 'Maintained data integrity across internal reporting pipelines and decision engines'
+                            techniques: ['data validation', 'reconciliation checks', 'anomaly detection'],
+                            methodology: 'pre-release validation workflow',
+                            outcome: 'Maintained data integrity across reporting and decision-engine inputs'
                         }
                     ]
                 }
@@ -1661,6 +1675,8 @@
                                     <div class="supporting-tools">
                                         ${project.tools.map(tool => `<span class="tool-chip-small">${tool}</span>`).join('')}
                                     </div>
+                                    ${project.techniques ? `<div class="meta-row"><span class="meta-label">Techniques:</span> <span class="meta-value">${project.techniques.join(', ')}</span></div>` : ''}
+                                    ${project.methodology ? `<div class="meta-row"><span class="meta-label">Methodology:</span> <span class="meta-value">${project.methodology}</span></div>` : ''}
                                     ${project.outcome ? `<div class="supporting-outcome">${project.outcome}</div>` : ''}
                                 </div>
                             </div>

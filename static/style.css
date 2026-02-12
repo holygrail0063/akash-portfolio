@@ -2179,12 +2179,31 @@ section:first-of-type {
     gap: 0.4rem;
 }
 
+.meta-row {
+    font-size: 0.8rem;
+    color: var(--secondary-accent);
+    line-height: 1.5;
+    margin-top: 0.5rem;
+}
+
+.meta-label {
+    font-weight: 500;
+    color: var(--secondary-accent);
+    margin-right: 0.5rem;
+}
+
+.meta-value {
+    color: var(--text);
+    opacity: 0.85;
+}
+
 .supporting-outcome {
     font-size: 0.85rem;
     color: var(--secondary-accent);
     font-style: italic;
     padding-left: 0.5rem;
     border-left: 2px solid var(--primary-accent);
+    margin-top: 0.5rem;
 }
 
 /* Case Study Modal */
