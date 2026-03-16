@@ -83,12 +83,11 @@
     --font-body: var(--font-sans);
 }
 
-/* Navbar inner — align to layout width, theme toggle on right */
+/* Navbar inner — align to layout width */
 .navbar-inner {
     max-width: var(--layout-max-width);
     margin: 0 auto;
     padding: 0 var(--layout-padding);
-    padding-right: calc(var(--layout-padding) + 44px); /* space for theme toggle */
     width: 100%;
     box-sizing: border-box;
     display: flex;
@@ -99,61 +98,9 @@
     min-height: 48px;
 }
 
-/* Theme toggle in navbar — top-right, aligned with nav links */
-.navbar .theme-toggle {
-    position: absolute;
-    right: var(--layout-padding);
-    top: 50%;
-    transform: translateY(-50%);
-    width: 36px;
-    height: 36px;
-    min-width: 36px;
-    min-height: 36px;
-    padding: 0;
-    margin: 0;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    background: var(--surface);
-    color: var(--text-secondary);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: border-color 0.2s, background 0.2s, color 0.2s;
-}
-
-.navbar .theme-toggle:hover {
-    background: var(--surface-alt);
-    border-color: var(--accent);
-    color: var(--accent);
-}
-
-.navbar .theme-toggle:focus {
-    outline: none;
-    border-color: var(--accent);
-}
-
-.navbar .theme-toggle svg {
-    width: 18px;
-    height: 18px;
-    fill: currentColor;
-}
-
 @media (max-width: 768px) {
     .navbar-inner {
-        padding-right: calc(var(--layout-padding) + 56px);
         min-height: 54px;
-    }
-    .navbar .theme-toggle {
-        right: 56px; /* left of fixed menu button */
-        width: 34px;
-        height: 34px;
-        min-width: 34px;
-        min-height: 34px;
-    }
-    .navbar .theme-toggle svg {
-        width: 16px;
-        height: 16px;
     }
 }
 
