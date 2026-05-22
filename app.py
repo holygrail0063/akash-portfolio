@@ -1,9 +1,11 @@
-from flask import Flask, render_template, request, jsonify, send_file
+from flask import Flask, render_template, request, jsonify, send_file, Response
 import json
 import os
 import socket
+from datetime import datetime, timezone
 
 app = Flask(__name__, static_folder='static')
+SITE_URL = os.environ.get('SITE_URL', 'https://www.akashkamble.ca').rstrip('/')
 
 # Initialize visit counter
 COUNTER_FILE = 'visit_counter.json'
@@ -46,7 +48,41 @@ def home():
 
 @app.route('/Resume.pdf')
 def serve_resume():
-    return send_file('Resume.pdf', mimetype='application/pdf')
+    return send_file(os.path.join(app.static_folder, 'resume.pdf'), mimetype='application/pdf')
+
+@app.route('/resume.pdf')
+def serve_resume_lowercase():
+    return serve_resume()
+
+@app.route('/robots.txt')
+def robots_txt():
+    content = f"""User-agent: *
+Allow: /
+
+Sitemap: {SITE_URL}/sitemap.xml
+"""
+    return Response(content, mimetype='text/plain')
+
+@app.route('/sitemap.xml')
+def sitemap_xml():
+    lastmod = datetime.now(timezone.utc).date().isoformat()
+    content = f"""<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>{SITE_URL}/</loc>
+    <lastmod>{lastmod}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>{SITE_URL}/Resume.pdf</loc>
+    <lastmod>{lastmod}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+</urlset>
+"""
+    return Response(content, mimetype='application/xml')
 
 
 if __name__ == '__main__':
